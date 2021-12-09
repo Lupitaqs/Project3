@@ -1,0 +1,19 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Shrikhand', cursive;
+}
+
+/* Home Page header */
+.header {
+  border: 1px solid red;
+  width: 100%;
+  height: 100px;
+}
+
+.header__logo {
+  width: 70%;
+}
+/*# sourceMappingURL=main.css.map */
