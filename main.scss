@@ -1,18 +1,11 @@
-$primary-colour: #9356DC;
-$secondary-colour: #FF79DA;
-$tertiary-colour: #99E2D0;
-$dark-gray: #C0C0C0;
-$md-gray: #ebebeb;
-$light-gray: #F5F5F5;
-
-$box-shadow: rgba(100, 100, 111, 0.644) 0px 2px 10px 0px;
-
-$font-sh: 'Shrikhand', cursive;
-$font-size: 18px;
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
 
 * {
     box-sizing: border-box;
-    overflow: hidden;
+    /*overflow: hidden; */
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
@@ -75,9 +68,39 @@ h1 {
         padding: 16px 27px;
         border-radius: 30px;
         border: none;
-        box-shadow: $box-shadow;
+        box-shadow: rgba(100, 100, 111, 0.644) 0px 2px 10px 0px;
         color: white;
         font-size: 1rem;
-        
     }
+}
+
+.steps {
+    /*border: 1px solid red; */
+    height: 450px;
+    padding: 50px 20px 50px 25px;
+    
+    &__title {
+        margin-bottom: 27px;
+    }
+
+    &__step {
+        background-color: $light-gray;
+        margin-bottom: 28px;
+        margin-left: 10px;
+        padding: 27px ;
+        border-radius: 23px;
+        font-weight: 500;
+        @include boxshadow;
+
+        @include step-layout;
+        
+        &--purple {
+            background-color: lighten($primary-colour, 35%);
+        }
+
+        &--icon--purple {
+            color: $primary-colour;
+        }
+    }
+
 }
