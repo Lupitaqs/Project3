@@ -211,6 +211,18 @@ h2 {
   font-size: 26px;
 }
 
+.new {
+  color: #278870;
+  background-color: #99E2D0;
+  width: 80px;
+  text-align: center;
+  position: relative;
+  bottom: 270px;
+  left: 245px;
+  padding: 5px 0;
+  border-radius: 3px;
+}
+
 /* -- Footer ------------------------------------------*/
 .footer {
   background-color: #3a3a3a;
