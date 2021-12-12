@@ -43,7 +43,7 @@ h2 {
 .header__icon {
   position: relative;
   right: 80px;
-  top: 4px;
+  top: 2px;
   font-size: 20px;
 }
 
@@ -51,6 +51,68 @@ h2 {
 .cover {
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
   width: 100vw;
+  z-index: 1;
+}
+
+/* -- Menu section ------------------------------------*/
+.menu {
+  background-color: #F5F5F5;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  position: relative;
+  top: 200px;
+  z-index: 2;
+  padding: 35px 20px;
+}
+
+.menu__heading {
+  font-family: "Shrikhand", cursive;
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+
+.menu__icon {
+  position: absolute;
+  left: 320px;
+  top: 40px;
+  font-size: 25px;
+}
+
+.menu__subheading {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.menu__subheading--line {
+  width: 40px;
+  border: 1.5px solid #99E2D0;
+  margin-bottom: 15px;
+}
+
+.menu__cards__card {
+  background-color: white;
+  margin-bottom: 28px;
+  border-radius: 15px;
+  list-style: none;
+  width: 100%;
+  height: 65px;
+  -webkit-box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
+          box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
+}
+
+.menu__cards ul {
+  padding: 0;
+}
+
+.menu__cards ul > li {
+  list-style: none;
+}
+
+.menu__cards a {
+  text-decoration: none;
+  color: black;
 }
 /*# sourceMappingURL=menu1.css.map */
