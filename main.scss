@@ -4,8 +4,7 @@
 @import "./utils/placeholders";
 
 * {
-    box-sizing: border-box;
-    /*overflow: hidden; */
+    box-sizing: border-box; 
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
@@ -13,7 +12,11 @@
 h1 {
     font-size: 24px;
 }
-/* Home Page header */
+
+h2 {
+    font-size: 19px;
+}
+/* -- Home Page header --------------------------------*/
 .header {
     /*border: 1px solid red; */
     height: fit-content;
@@ -42,7 +45,7 @@ h1 {
     }
 }
 
-/* Home Page Book the menu you like */
+/* -- Home Page Book the menu you like ----------------*/
 .main {
     background-color: $light-gray;
     height: 280px;
@@ -50,7 +53,7 @@ h1 {
     flex-flow: column;
     align-items: center;
 
-    &__title {
+    &__heading {
         margin: 40px 0;
     }
 
@@ -68,18 +71,19 @@ h1 {
         padding: 16px 27px;
         border-radius: 30px;
         border: none;
-        box-shadow: rgba(100, 100, 111, 0.644) 0px 2px 10px 0px;
+        box-shadow: $box-shadow--dark 0px 2px 10px 0px;
         color: white;
         font-size: 1rem;
     }
 }
 
+/* -- How it works section ----------------------------*/
 .steps {
     /*border: 1px solid red; */
     height: 450px;
     padding: 50px 20px 50px 25px;
     
-    &__title {
+    &__heading {
         margin-bottom: 27px;
     }
 
@@ -102,5 +106,107 @@ h1 {
             color: $primary-colour;
         }
     }
+}
+
+/* -- Restaurants section -----------------------------*/
+.restaurants {
+    background-color: $light-gray;
+    padding: 50px 20px 35px 20px;
+
+    &__heading {
+        margin-bottom: 23px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 0;
+
+        &__card {
+            background-color: white;
+            margin-bottom: 28px;
+            border-radius: 15px;
+            list-style: none;
+            width: 100%;
+            height: 255px;
+            @include boxshadow;
+
+            a {
+                text-decoration: none;
+                color: black; 
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 70%;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            h2 {
+                margin: 10px 0 5px 12px;
+                width: 70%;
+            }
+
+            p {
+                margin: 0 0 10px 12px;
+                font-weight: 300;
+                font-size: 17px;
+                width: 50%;
+            }
+
+            &__info__icon {
+                position: relative;
+                left: 287px;
+                bottom: 55px;
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+/* -- Footer ------------------------------------------*/
+.footer {
+    background-color: #3a3a3a;
+    height: 200px;
+    color: white;
+    padding: 25px;
+    
+    &__heading {
+        font-family: Shrikhand;
+        font-weight: 300;
+        margin-bottom: 20px;
+    } 
+
+    &__info {
+        ul {
+            padding-left: 0;
+        
+
+            li {
+                list-style: none;
+                margin-bottom: 7px;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        &__icon {
+            &--clutery {
+                font-size: 14px;
+                margin-right: 11px;
+            }
+
+            &--hands {
+                font-size: 11.5px;
+                margin-right: 9px;
+            }
+        }
+    }
+
 
 }

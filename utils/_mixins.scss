@@ -1,5 +1,5 @@
-@mixin boxshadow {
-    box-shadow: rgba(100, 100, 111, 0.336) 0px 5px 15px -2px;;
+@mixin boxshadow($colour: $box-shadow--light) {
+    box-shadow:  0px 5px 15px -2px $colour;
 }
 
 @mixin step-layout {
