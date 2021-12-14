@@ -46,6 +46,8 @@ h2 {
     top: 200px;
     z-index: 2;
     padding: 35px 16px;
+    display: flex;
+    flex-flow: column;
 
     &__heading {
         font-family: $font-sh;
@@ -110,16 +112,19 @@ h2 {
             color: black; 
         }
     }
-
-    .btn {
-        @include btn;
-    }
 }
 
+.btn {
+    @include btn;
+    width: 180px;
+    align-self: center;
+    margin: 20px 0 25px 0;
+}
+
+
 /* -- Footer ------------------------------------------*/
- .footer {
-     @include footer;
- }
+
+ 
 
 
   

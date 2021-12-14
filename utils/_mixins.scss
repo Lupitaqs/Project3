@@ -46,15 +46,13 @@
 }
 
 @mixin btn {
-    .btn {
-        background-image:linear-gradient($secondary-colour, $primary-colour);
-        padding: 16px 27px;
-        border-radius: 30px;
-        border: none;
-        box-shadow: darken($box-shadow--dark, 50%) 0px 2px 10px 0px;
-        color: white;
-        font-size: 1rem;
-    }
+    background-image:linear-gradient($secondary-colour, $primary-colour);
+    padding: 16px 27px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: darken($box-shadow--dark, 50%) 0px 2px 10px 0px;
+    color: white;
+    font-size: 1rem;
 }
 
 @mixin footer {

@@ -84,7 +84,7 @@ h2 {
   text-align: center;
 }
 
-.main .btn {
+.btn {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   padding: 16px 27px;
@@ -260,7 +260,4 @@ h2 {
   font-size: 11.5px;
   margin-right: 9px;
 }
-
-/*-----------------------------------------------------*/
-/*-- Menu THE FULL PALETTE ----------------------------*/
 /*# sourceMappingURL=main.css.map */
