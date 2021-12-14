@@ -1,0 +1,169 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+* {
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 19px;
+}
+/* -- Home Page header --------------------------------*/
+.header {
+    /*border: 1px solid red; */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    @include header-logo;
+}
+    
+/* -- Home Page Book the menu you like ----------------*/
+.main {
+    background-color: $light-gray;
+    height: 340px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &__loc {
+        border-top: 2px solid $dark-gray;
+        background-color: $md-gray;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+
+        #loc-icon {
+            margin-right: 15px;
+        }
+    }
+
+    &__heading {
+        margin: 40px 0;
+    }
+
+    &__txt {
+        /*border: 1px solid red; */
+        margin: 0 0 30px 0;
+        font-size: $font-size;
+        font-weight: 250;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+.btn {
+    @include btn;
+}
+
+/* -- How it works section ----------------------------*/
+.steps {
+    /*border: 1px solid red; */
+    height: 450px;
+    padding: 50px 20px 50px 25px;
+    
+    &__heading {
+        margin-bottom: 27px;
+    }
+
+    &__step {
+        background-color: $light-gray;
+        margin-bottom: 28px;
+        margin-left: 10px;
+        padding: 27px ;
+        border-radius: 23px;
+        font-weight: 500;
+        @include boxshadow($box-shadow--dark);
+
+        @include step-layout;
+        
+        &--purple {
+            background-color: lighten($primary-colour, 35%);
+        }
+
+        &--icon--purple {
+            color: $primary-colour;
+        }
+    }
+}
+
+/* -- Restaurants section -----------------------------*/
+.restaurants {
+    background-color: $light-gray;
+    padding: 50px 20px 35px 20px;
+
+    &__heading {
+        margin-bottom: 23px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 0;
+
+        &__card {
+            background-color: white;
+            margin-bottom: 28px;
+            border-radius: 15px;
+            list-style: none;
+            width: 100%;
+            height: 255px;
+            @include boxshadow;
+
+            a {
+                text-decoration: none;
+                color: black; 
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 70%;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            h2 {
+                margin: 10px 0 5px 12px;
+                width: 70%;
+            }
+
+            p {
+                margin: 0 0 10px 12px;
+                font-weight: 300;
+                font-size: 17px;
+                width: 50%;
+            }
+
+            &__info__icon {
+                position: relative;
+                left: 287px;
+                bottom: 55px;
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+.new {
+    color: darken($tertiary-colour, 40%);
+    background-color: $tertiary-colour;
+    width: 80px;
+    text-align: center;
+    position: relative;
+    bottom: 270px;
+    left: 245px;
+    padding: 5px 0;
+    border-radius: 3px;
+}
+
+/* -- Footer ------------------------------------------*/
+@include footer;
