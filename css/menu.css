@@ -1,3 +1,7 @@
+.header {
+  margin: 22px 0 13px 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,30 +25,22 @@ h2 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.header .header {
-  height: 60px;
-}
-
-.header .header__logo {
+.header__logo {
   width: 40%;
   height: auto;
-  margin: 22px 0 13px 0;
 }
 
 .header__icon {
   font-size: 20px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  position: absolute;
+  left: 6%;
 }
 
 /* -- Cover pic ---------------------------------------*/
@@ -83,7 +79,7 @@ h2 {
 
 .menu__icon {
   position: absolute;
-  left: 320px;
+  left: 85%;
   top: 40px;
   font-size: 25px;
 }

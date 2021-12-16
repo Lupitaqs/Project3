@@ -1,3 +1,7 @@
+.header {
+  margin: 22px 0 13px 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -28,14 +32,9 @@ h2 {
           align-items: center;
 }
 
-.header .header {
-  height: 60px;
-}
-
-.header .header__logo {
+.header__logo {
   width: 40%;
   height: auto;
-  margin: 22px 0 13px 0;
 }
 
 /* -- Home Page Book the menu you like ----------------*/

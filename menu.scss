@@ -19,12 +19,17 @@ h2 {
 }
 /* -- Home Page header --------------------------------*/
 .header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    @extend %header-margin;
     
-    @include menu-header;
+    @include header-logo;
 
     &__icon {
         font-size: 20px;
-        align-self: flex-start;
+        position: absolute;
+        left: 6%;
     }
 }
 
@@ -57,7 +62,7 @@ h2 {
 
     &__icon {
         position: absolute;
-        left: 320px;
+        left: 85%;
         top: 40px;
         font-size: 25px;
     }

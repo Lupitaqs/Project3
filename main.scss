@@ -22,6 +22,7 @@ h2 {
     display: flex;
     flex-flow: column;
     align-items: center;
+    @extend %header-margin;
     @include header-logo;
 }
     

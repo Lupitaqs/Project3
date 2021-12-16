@@ -1,22 +1,8 @@
 @mixin header-logo {
-    .header {
-        height: 60px;
-    
-        &__logo {
-            width: 40%;
-            height: auto;
-            margin: 22px 0 13px 0;
-        }
+    &__logo {
+    width: 40%;
+    height: auto;
     }
-}
-
-@mixin menu-header {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
-
-    @include header-logo;
 }
 
 @mixin boxshadow($colour: $box-shadow--light) {
