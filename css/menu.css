@@ -42,10 +42,9 @@ h2 {
 }
 
 .header__icon {
-  position: relative;
-  right: 80px;
-  top: 2px;
   font-size: 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 /* -- Cover pic ---------------------------------------*/
@@ -73,6 +72,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  margin-bottom: 200px;
 }
 
 .menu__heading {
@@ -200,4 +200,4 @@ h2 {
   font-size: 11.5px;
   margin-right: 9px;
 }
-/*# sourceMappingURL=menu1.css.map */
+/*# sourceMappingURL=menu.css.map */

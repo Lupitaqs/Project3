@@ -19,13 +19,12 @@ h2 {
 }
 /* -- Home Page header --------------------------------*/
 .header {
+    
     @include menu-header;
 
     &__icon {
-        position: relative;
-        right: 80px;
-        top: 2px;
         font-size: 20px;
+        align-self: flex-start;
     }
 }
 
@@ -48,6 +47,7 @@ h2 {
     padding: 35px 16px;
     display: flex;
     flex-flow: column;
+    margin-bottom: 200px;
 
     &__heading {
         font-family: $font-sh;
@@ -116,7 +116,7 @@ h2 {
 
 .btn {
     @include btn;
-    width: 190px;
+    width: 190px; 
     align-self: center;
     margin: 20px 0 25px 0;
 }
