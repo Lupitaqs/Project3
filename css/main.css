@@ -74,6 +74,13 @@ h2 {
   margin: 40px 0;
 }
 
+@media screen and (min-width: 992px) {
+  .main__heading {
+    margin: 50px 0 40px 0;
+    font-size: 28px;
+  }
+}
+
 .main__txt {
   /*border: 1px solid red; */
   margin: 0 0 30px 0;
@@ -100,10 +107,55 @@ h2 {
   /*border: 1px solid red; */
   height: 450px;
   padding: 50px 20px 50px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .steps {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 290px;
+  }
 }
 
 .steps__heading {
   margin-bottom: 27px;
+}
+
+@media screen and (min-width: 768px) {
+  .steps__heading {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .steps__heading {
+    width: 100%;
+    height: 30px;
+  }
 }
 
 .steps__step {
@@ -115,6 +167,20 @@ h2 {
   font-weight: 500;
   -webkit-box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.384);
           box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.384);
+}
+
+@media screen and (min-width: 768px) {
+  .steps__step {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .steps__step {
+    width: 30%;
+    height: 90px;
+    padding-top: 30px;
+  }
 }
 
 .steps__step--number {
@@ -166,6 +232,17 @@ h2 {
   padding: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurants__cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .restaurants__cards__card {
   background-color: white;
   margin-bottom: 28px;
@@ -175,6 +252,12 @@ h2 {
   height: 255px;
   -webkit-box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
           box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants__cards__card {
+    width: 45%;
+  }
 }
 
 .restaurants__cards__card a {
@@ -220,6 +303,18 @@ h2 {
   left: 72.5%;
   padding: 5px 0;
   border-radius: 3px;
+}
+
+@media screen and (min-width: 992px) {
+  .new {
+    left: 78%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .new {
+    left: 80%;
+  }
 }
 
 /* -- Footer ------------------------------------------*/

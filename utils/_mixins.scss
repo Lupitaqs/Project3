@@ -29,6 +29,8 @@
         top: 2px;
         margin-right: 13px;
     }
+
+    @content;
 }
 
 @mixin btn {
@@ -82,5 +84,23 @@
                 }
             }
         }
+    }
+}
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin bigscreen-only {
+    @media screen and (min-width: map-get($breakpoints, bigscreen)) {
+        @content;
     }
 }
