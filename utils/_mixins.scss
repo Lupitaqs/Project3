@@ -87,19 +87,19 @@
     }
 }
 
-@mixin tablet-only {
+@mixin tablet {
     @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }
 
-@mixin desktop-only {
+@mixin desktop {
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
 
-@mixin bigscreen-only {
+@mixin bigscreen {
     @media screen and (min-width: map-get($breakpoints, bigscreen)) {
         @content;
     }
