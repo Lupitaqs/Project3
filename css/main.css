@@ -203,14 +203,6 @@ h2 {
   margin-right: 13px;
 }
 
-.steps__step--purple {
-  background-color: #f2eafb;
-}
-
-.steps__step--icon--purple {
-  color: #9356DC;
-}
-
 /* -- Restaurants section -----------------------------*/
 .restaurants {
   background-color: #F5F5F5;

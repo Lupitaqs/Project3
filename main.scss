@@ -119,14 +119,6 @@ h2 {
         }
 
         @include step-layout;
-        
-        &--purple {
-            background-color: lighten($primary-colour, 35%);
-        }
-
-        &--icon--purple {
-            color: $primary-colour;
-        }
     }
 }
 
