@@ -34,7 +34,7 @@
 }
 
 @mixin btn {
-    background-image:linear-gradient($secondary-colour, $primary-colour);
+    background-image: $btn-colour;
     padding: 16px 27px;
     border-radius: 30px;
     border: none;

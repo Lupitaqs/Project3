@@ -108,6 +108,10 @@ h2 {
         border-radius: 23px;
         font-weight: 500;
         @include boxshadow($box-shadow--dark);
+
+        &:hover {
+            background-color: lighten($primary-colour, 35%);
+        }
         
         @include tablet {
             width: 70%;
