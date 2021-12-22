@@ -102,11 +102,6 @@ h2 {
   font-size: 1rem;
 }
 
-.btn:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC)), 10%;
-  background-image: linear-gradient(#FF79DA, #9356DC), 10%;
-}
-
 /* -- How it works section ----------------------------*/
 .steps {
   /*border: 1px solid red; */
