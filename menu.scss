@@ -57,7 +57,7 @@ h2 {
     padding: 35px 16px;
     display: flex;
     flex-flow: column wrap;
-    margin-bottom: 200px;
+    margin-bottom: 200px; 
 
     @include desktop {
         padding: 35px 27px;
@@ -128,7 +128,31 @@ h2 {
                     margin-right: 10px;
                 }
             }
+
+            &:hover + .animation__checkbox {
+                transform: scaleX(1);
+            }
         }
+
+.animation {
+    &__checkbox {
+        position: relative;
+        left: 83.5%;
+        bottom: 55px;
+        width: 20%;
+        padding: 22.5px 5px;
+        display: flex;
+        justify-content: center;
+        background-color: $tertiary-colour;
+        color: white;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        font-size: 23px;
+        transform: scaleX(0);
+    }
+    
+    
+}
 
         ul {
             padding: 0;

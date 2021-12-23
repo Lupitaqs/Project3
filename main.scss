@@ -109,8 +109,13 @@ h2 {
         font-weight: 500;
         @include boxshadow($box-shadow--dark);
 
+        @include step-layout;
+       
         &:hover {
             background-color: lighten($primary-colour, 35%);
+            & + .steps__step--icon {
+                color: $primary-colour;
+            }
         }
         
         @include tablet {
@@ -122,7 +127,7 @@ h2 {
             padding-top: 30px;
         }
 
-        @include step-layout;
+        
     }
 }
 

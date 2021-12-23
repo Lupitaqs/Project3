@@ -162,6 +162,32 @@ h2 {
   margin-right: 10px;
 }
 
+.menu__cards__card:hover + .animation__checkbox {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.menu__cards .animation__checkbox {
+  position: relative;
+  left: 83.5%;
+  bottom: 55px;
+  width: 20%;
+  padding: 22.5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #99E2D0;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 23px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
 .menu__cards ul {
   padding: 0;
 }
