@@ -184,8 +184,8 @@ h2 {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   font-size: 23px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
   -webkit-transition: -webkit-transform 500ms;
   transition: -webkit-transform 500ms;
   transition: transform 500ms;
@@ -193,8 +193,8 @@ h2 {
 }
 
 .menu__cards .animation__checkbox:hover {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
 }
 
 .menu__cards ul {
