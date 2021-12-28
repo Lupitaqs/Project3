@@ -148,11 +148,11 @@ h2 {
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         font-size: 23px;
-        transform: scaleX(1);
+        transform: scaleX(0);
         transition: transform 500ms;
 
         &:hover {
-            transform: scaleX(0);
+            transform: scaleX(1);
         }
     }
     
