@@ -186,6 +186,15 @@ h2 {
   font-size: 23px;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.menu__cards .animation__checkbox:hover {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
 }
 
 .menu__cards ul {
@@ -232,6 +241,11 @@ h2 {
       -ms-grid-row-align: center;
       align-self: center;
   margin: 20px 0 25px 0;
+}
+
+.btn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff83dd), to(#985ede));
+  background-image: linear-gradient(#ff83dd, #985ede);
 }
 
 /* -- Footer ------------------------------------------*/
