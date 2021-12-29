@@ -129,7 +129,10 @@ h2 {
         }
 
         @include tablet {
-            left: 91%;
+            left: 85%;
+            & .menu__btn--coloured {
+                left: 73%;
+            }
         }
     }
 
