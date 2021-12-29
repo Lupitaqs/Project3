@@ -129,7 +129,7 @@ h2 {
                 }
             }
 
-            &:active {
+            &:hover {
                 .animation__checkbox {
                     transform: scaleX(1);
                 }
@@ -154,9 +154,10 @@ h2 {
         transition: transform 700ms;
         transform-origin: 100% 50%;
 
-        &:active {
+        &:hover {
             transform: scaleX(1);
         }
+
     }
     
     

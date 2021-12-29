@@ -201,6 +201,12 @@ h2 {
                 background: transparent;
                 cursor: pointer;
                 border: none;
+
+                &:hover {
+                    .restaurants__cards__card__btn--coloured {
+                        transform: scaleX(1);
+                    }
+                }
                 
                 &--no_coloured {
                     position: relative;
