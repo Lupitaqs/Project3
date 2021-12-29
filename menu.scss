@@ -36,6 +36,8 @@ h2 {
             top: 5%;
         }
     }
+
+    @include desktop-header;
 }
 
 /* -- Cover pic ---------------------------------------*/

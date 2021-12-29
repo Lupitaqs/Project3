@@ -24,6 +24,8 @@ h2 {
     align-items: center;
     @extend %header-margin;
     @include header-logo;
+
+    @include desktop-header;
 }
     
 /* -- Home Page Book the menu you like ----------------*/

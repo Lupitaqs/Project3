@@ -2,6 +2,8 @@
     &__logo {
     width: 40%;
     height: auto;
+
+    content: " ";
     }
 }
 
@@ -109,5 +111,13 @@
 @mixin bigscreen {
     @media screen and (min-width: map-get($breakpoints, bigscreen)) {
         @content;
+    }
+}
+
+@mixin desktop-header {
+    @include desktop {
+        & .header__logo {
+            max-height: 60px;
+        }
     }
 }
