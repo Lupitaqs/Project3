@@ -207,6 +207,7 @@ h2 {
                     bottom: 0px;
                     left: auto;
                     color: black;
+
                 }
                 
                 &--coloured {
@@ -217,12 +218,11 @@ h2 {
                     background-clip: text;
                     background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
                     display: inline-block;
-                    transform: scaleX(1);
+                    transform: scaleX(0);
                     transition-duration: 500ms;
 
-
                     &:hover {
-                        transform: scaleX(0);
+                        transform: scaleX(1);
                     }
                 }
             }
