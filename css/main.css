@@ -85,7 +85,7 @@ h2 {
   /*border: 1px solid red; */
   margin: 0 0 30px 0;
   font-size: 18px;
-  font-weight: 280;
+  font-weight: 300;
   width: 80%;
   text-align: center;
 }
@@ -308,8 +308,10 @@ h2 {
 }
 
 .restaurants__cards__card__btn:hover .restaurants__cards__card__btn--coloured {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: likebtn 500ms;
+          animation: likebtn 500ms;
 }
 
 .restaurants__cards__card__btn--no_coloured {
@@ -328,15 +330,41 @@ h2 {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   display: inline-block;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 50% 35%;
+          transform-origin: 50% 35%;
+}
+
+@-webkit-keyframes likebtn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes likebtn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .restaurants__cards__card__btn--coloured:hover {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .new {
