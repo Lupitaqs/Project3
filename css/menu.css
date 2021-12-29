@@ -94,19 +94,83 @@ h2 {
   font-size: 26px;
 }
 
-.menu__icon {
+.menu__btn {
   position: absolute;
-  left: 85%;
+  left: 80%;
   top: 40px;
   font-size: 25px;
+  width: 40px;
+  height: 35px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
 }
 
-.menu__icon--modifier {
-  left: 87%;
+.menu__btn:hover .menu__btn--coloured {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: likebtn 500ms;
+          animation: likebtn 500ms;
+}
+
+.menu__btn--no_coloured {
+  position: relative;
+  top: 0px;
+  left: auto;
+  color: black;
+}
+
+.menu__btn--coloured {
+  position: relative;
+  top: -30px;
+  left: -12%;
+  color: transparent;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+  display: inline-block;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 50% 35%;
+          transform-origin: 50% 35%;
+}
+
+@-webkit-keyframes likebtn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes likebtn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.menu__btn--modifier {
+  left: 78%;
+}
+
+.menu__btn--modifier + .menu__btn--coloured {
+  left: 65%;
 }
 
 @media screen and (min-width: 768px) {
-  .menu__icon {
+  .menu__btn {
     left: 91%;
   }
 }
