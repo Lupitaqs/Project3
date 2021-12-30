@@ -241,6 +241,40 @@ h2 {
           transform: scaleX(1);
 }
 
+.menu__cards__card:hover .animation__checkbox__icon {
+  -webkit-animation: icon-rotation 300ms;
+          animation: icon-rotation 300ms;
+}
+
+@-webkit-keyframes icon-rotation {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes icon-rotation {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.menu__cards__card:hover .price {
+  -webkit-transform: translateX(-220%);
+          transform: translateX(-220%);
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
 .menu__cards .animation__checkbox {
   position: relative;
   left: 83.5%;
@@ -260,10 +294,10 @@ h2 {
   font-size: 23px;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: -webkit-transform 700ms;
-  transition: -webkit-transform 700ms;
-  transition: transform 700ms;
-  transition: transform 700ms, -webkit-transform 700ms;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
 }
