@@ -160,78 +160,99 @@ h2 {
             height: 67px;
             padding: 10px;
             @include boxshadow;
-
+            
             @include tablet {
                 width: 48%;
+            }
+
+            &__heading {
+                @extend %ellipsis;
             }
 
             &__description {
                 font-weight: 300;
                 margin-top: 5px;
                 font-size: 15px;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
+                @extend %ellipsis;
+            }
 
-                .price {
-                    font-weight: 500;
-                    margin-right: 10px;
-                }
+            &__price {
+                font-weight: 500;
+                margin-right: 10px;
+                position: relative;
+                left: 88%;
+                bottom: 18.5px;
+                display: inline-block;
+                transform: translateX(0);
+                transition-duration: 500ms;
             }
 
             &:hover {
-                .animation {
-                    &__checkbox {
-                        transform: scaleX(1);  
+                .menu__cards__card__description {
+                    overflow: hidden;
+                }
 
-                        &__icon {
-                            animation: icon-rotation 300ms;
-                        
-                            @keyframes icon-rotation {
-                                0% {
-                                    transform: rotate(45deg);
-                                }
-                                100% {
-                                    transform: rotate(360deg);
-                                }
-                            }
-                        }
+                .menu__cards__card__heading {
+                    overflow: hidden;
+                } 
+
+                .menu__cards__card__price {
+                    transform: translateX(-210%);
+                }
+
+                .animation {
+                    transform: scale(1);
+                    animation: pop-up .5s;
+                    animation-fill-mode: both;
+
+                    &__icon {
+                        transform: rotate(0)
                     }
                 }
                 
-                .price {
-                    transform: translateX(-220%);
-                    transition-duration: 500ms;
+            }
+        
+            .animation {
+                background-color: $tertiary-colour;
+                width: 18%;
+                position: relative;
+                left: 85.5%;
+                bottom: 74px;
+                height: 67.5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                
+                
+                transform: scale(0);
+                transition-duration: .5s;
+
+                
+
+                @keyframes pop-up {
+                    0% {
+                        transform: scale(0);
+                        transform: translateX(80px);
+                    }
+                    100% {
+                        transform: scale(1);
+                    }
                 }
 
+                
+
+                &__icon {
+                    color: white;
+                    font-size: 20px;
+                    transform: rotate(180deg);
+                    transition-duration: .5s;
+                }
             }
-        }
 
-.animation {
-    &__checkbox {
-        position: relative;
-        left: 83.5%;
-        bottom: 55px;
-        width: 20%;
-        padding: 22.5px 5px;
-        display: flex;
-        justify-content: center;
-        background-color: $tertiary-colour;
-        color: white;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        font-size: 23px;
-        transform: scaleX(0);
-        transition: transform 500ms;
-        transform-origin: 100% 50%;
-
-        &:hover {
-            transform: scaleX(1);
+            
         }
-    }
-    
-    
-}
 
         ul {
             padding: 0;
@@ -265,8 +286,4 @@ h2 {
 }
 
 /* -- Footer ------------------------------------------*/
-@include footer;
- 
-
-
-  
+@include footer; 

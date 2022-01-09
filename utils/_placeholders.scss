@@ -2,4 +2,9 @@
     margin: 22px 0 13px 0;
 }
 
-
+%ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-overflow: visible;
+    width: 65%;;
+}

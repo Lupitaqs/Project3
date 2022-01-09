@@ -2,6 +2,13 @@
   margin: 22px 0 13px 0;
 }
 
+.menu__cards__card__heading, .menu__cards__card__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-overflow: visible;
+  width: 65%;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -219,92 +226,105 @@ h2 {
   font-weight: 300;
   margin-top: 5px;
   font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.menu__cards__card__description .price {
+.menu__cards__card__price {
   font-weight: 500;
   margin-right: 10px;
-}
-
-.menu__cards__card:hover .animation__checkbox {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-.menu__cards__card:hover .animation__checkbox__icon {
-  -webkit-animation: icon-rotation 300ms;
-          animation: icon-rotation 300ms;
-}
-
-@-webkit-keyframes icon-rotation {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes icon-rotation {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-.menu__cards__card:hover .price {
-  -webkit-transform: translateX(-220%);
-          transform: translateX(-220%);
+  position: relative;
+  left: 88%;
+  bottom: 18.5px;
+  display: inline-block;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
 }
 
-.menu__cards .animation__checkbox {
+.menu__cards__card:hover .menu__cards__card__description {
+  overflow: hidden;
+}
+
+.menu__cards__card:hover .menu__cards__card__heading {
+  overflow: hidden;
+}
+
+.menu__cards__card:hover .menu__cards__card__price {
+  -webkit-transform: translateX(-210%);
+          transform: translateX(-210%);
+}
+
+.menu__cards__card:hover .animation {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pop-up .5s;
+          animation: pop-up .5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__cards__card:hover .animation__icon {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.menu__cards__card .animation {
+  background-color: #99E2D0;
+  width: 18%;
   position: relative;
-  left: 83.5%;
-  bottom: 55px;
-  width: 20%;
-  padding: 22.5px 5px;
+  left: 85.5%;
+  bottom: 74px;
+  height: 67.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #99E2D0;
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  font-size: 23px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
-  -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
 }
 
-.menu__cards .animation__checkbox:hover {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+@-webkit-keyframes pop-up {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.menu__cards__card .animation__icon {
+  color: white;
+  font-size: 20px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
 }
 
 .menu__cards ul {
