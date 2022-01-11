@@ -22,7 +22,7 @@ h2 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    @extend %header-margin;
+    margin: 4% 0 3% 0;
     
     @include header-logo;
 
