@@ -19,10 +19,12 @@ h2 {
 }
 /* -- Home Page header --------------------------------*/
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 4% 0 3% 0;
+    margin: 14% 0 13% 0;
     
     @include header-logo;
 
