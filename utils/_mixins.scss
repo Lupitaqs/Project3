@@ -2,9 +2,6 @@
     &__logo {
     width: 40%;
     height: auto;
-
-    content: " ";
-    }
 }
 
 @mixin boxshadow($colour: $box-shadow--light) {
