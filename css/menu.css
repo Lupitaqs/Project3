@@ -214,6 +214,8 @@ h2 {
   padding: 10px;
   -webkit-box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
           box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
+  /* Entrance animation */
+  /* ---- */
 }
 
 @media screen and (min-width: 768px) {
@@ -255,15 +257,8 @@ h2 {
 }
 
 .menu__cards__card:hover .animation {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-animation: pop-up .5s;
-          animation: pop-up .5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .menu__cards__card:hover .animation__icon {
@@ -289,36 +284,12 @@ h2 {
           align-items: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
-}
-
-@-webkit-keyframes pop-up {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transform: translateX(80px);
-            transform: translateX(80px);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes pop-up {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transform: translateX(80px);
-            transform: translateX(80px);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .menu__cards__card .animation__icon {

@@ -160,6 +160,10 @@ h2 {
             height: 67px;
             padding: 10px;
             @include boxshadow;
+
+            /* Entrance animation */
+            
+            /* ---- */
             
             @include tablet {
                 width: 48%;
@@ -202,13 +206,8 @@ h2 {
                 }
 
                 .animation {
-                    transform: scale(1);
-                    animation: pop-up .5s;
-                    animation-fill-mode: both;
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-
+                    transform: scaleX(1);
+            
                     &__icon {
                         transform: rotate(0)
                     }
@@ -229,20 +228,10 @@ h2 {
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 
-                transform: scale(0);
+                transform: scaleX(0);
                 transition-duration: .5s;
+                transform-origin: right;
 
-                @keyframes pop-up {
-                    0% {
-                        transform: scale(0);
-                        transform: translateX(80px);
-                    }
-                    100% {
-                        transform: scale(1);
-                    }
-                }
-
-                
 
                 &__icon {
                     color: white;
