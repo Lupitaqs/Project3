@@ -22,8 +22,8 @@ h2 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    
-    
+    @extend %header-margin;
+
     @include header-logo;
 
     &__icon {

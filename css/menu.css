@@ -33,6 +33,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 22px 0 13px 0;
 }
 
 .header__logo {
