@@ -23,7 +23,6 @@ h2 {
     flex-flow: row nowrap;
     justify-content: center;
     @extend %header-margin;
-
     @include header-logo;
 
     &__icon {
@@ -162,7 +161,18 @@ h2 {
             @include boxshadow;
 
             /* Entrance animation */
-            
+            animation: drop 1.8s ease;
+
+            @keyframes drop {
+                0% {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
             /* ---- */
             
             @include tablet {
@@ -207,41 +217,13 @@ h2 {
 
                 .animation {
                     transform: scaleX(1);
-            
+
                     &__icon {
-                        transform: rotate(0)
+                        transform: rotate(0);
                     }
                 }
-                
-            }
-        
-            .animation {
-                background-color: $tertiary-colour;
-                width: 18%;
-                position: relative;
-                left: 85.5%;
-                bottom: 74px;
-                height: 67.5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-top-right-radius: 15px;
-                border-bottom-right-radius: 15px;
-                
-                transform: scaleX(0);
-                transition-duration: .5s;
-                transform-origin: right;
-
-
-                &__icon {
-                    color: white;
-                    font-size: 20px;
-                    transform: rotate(180deg);
-                    transition-duration: .5s;
-                }
             }
 
-            
         }
 
         ul {
@@ -264,6 +246,31 @@ h2 {
             color: black; 
         }
     }
+}
+.animation {
+    background-color: $tertiary-colour;   
+    width: 20%; 
+    height: 67.1px;
+    position: relative; 
+    left: 83.1%;
+    bottom: 73.4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    transform: scaleX(0);
+    transition-duration: .5s;
+    transform-origin: right;
+
+    &__icon {
+        color: white;
+        font-size: 20px;
+        transform: rotate(180deg);
+        transition-duration: .5s;
+    }
+
 }
 
 .btn {

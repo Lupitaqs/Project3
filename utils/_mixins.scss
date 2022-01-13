@@ -1,13 +1,14 @@
 @mixin header-logo {
     &__logo {
-    width: 40%;
-    height: auto;
+        width: 40%;
+        height: auto;
 
-    @content;
+        @content;
+    }
 }
 
 @mixin boxshadow($colour: $box-shadow--light) {
-    box-shadow:  0px 5px 15px -2px $colour;
+    box-shadow:  0px 5px 15px -2px $box-shadow--light;
 }
 
 @mixin step-layout {
@@ -119,5 +120,4 @@
             max-height: 60px;
         }
     }
-}
 }
