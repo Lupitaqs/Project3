@@ -214,8 +214,10 @@ h2 {
   -webkit-box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
           box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
   /* Entrance animation */
-  -webkit-animation: drop 1.8s ease;
-          animation: drop 1.8s ease;
+  -webkit-animation: drop 2s ease;
+          animation: drop 2s ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
   /* ---- */
 }
 
@@ -243,6 +245,51 @@ h2 {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+}
+
+.menu__cards__card ul :nth-child(1) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.menu__cards__card ul :nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.menu__cards__card ul :nth-child(3) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.menu__cards__card ul :nth-child(4) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.menu__cards__card ul :nth-child(5) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.menu__cards__card ul :nth-child(6) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.menu__cards__card ul :nth-child(7) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.menu__cards__card ul :nth-child(8) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.menu__cards__card ul :nth-child(9) {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
 }
 
 @media screen and (min-width: 768px) {
@@ -328,7 +375,7 @@ h2 {
   height: 67.1px;
   position: relative;
   left: 83.1%;
-  bottom: 73.4px;
+  bottom: 73.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
