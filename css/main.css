@@ -411,26 +411,26 @@ h2 {
   margin-bottom: 20px;
 }
 
-.footer__info ul {
+.footer ul {
   padding-left: 0;
 }
 
-.footer__info ul li {
+.footer ul li {
   list-style: none;
   margin-bottom: 7px;
 }
 
-.footer__info a {
+.footer a {
   color: white;
   text-decoration: none;
 }
 
-.footer__info__icon--clutery {
+.footer .clutery :nth-child(1) {
   font-size: 14px;
   margin-right: 11px;
 }
 
-.footer__info__icon--hands {
+.footer .hands :nth-child(1) {
   font-size: 11.5px;
   margin-right: 9px;
 }

@@ -65,34 +65,34 @@
             margin-bottom: 20px;
         } 
     
-        &__info {
-            ul {
-                padding-left: 0;
-            
-    
-                li {
-                    list-style: none;
-                    margin-bottom: 7px;
-                }
-            }
-    
-            a {
-                color: white;
-                text-decoration: none;
-            }
-    
-            &__icon {
-                &--clutery {
-                    font-size: 14px;
-                    margin-right: 11px;
-                }
-    
-                &--hands {
-                    font-size: 11.5px;
-                    margin-right: 9px;
-                }
+       
+        ul {
+            padding-left: 0;
+        
+
+            li {
+                list-style: none;
+                margin-bottom: 7px;
             }
         }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    
+           
+        .clutery :nth-child(1) {
+            font-size: 14px;
+            margin-right: 11px;
+        }
+
+        .hands :nth-child(1) {
+            font-size: 11.5px;
+            margin-right: 9px;
+        }
+            
+        
     }
 }
 

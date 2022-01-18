@@ -2,10 +2,10 @@
   margin: 22px 0 13px 0;
 }
 
-.menu__cards__card__heading, .menu__cards__card__description {
+.dishes .card__description {
   white-space: nowrap;
   text-overflow: ellipsis;
-  text-overflow: visible;
+  overflow: visible;
   width: 65%;
 }
 
@@ -203,78 +203,73 @@ h2 {
   margin-bottom: 15px;
 }
 
-.menu__cards {
-  /* ---- */
-}
-
-.menu__cards .delay-1 {
+.dishes .delay-1 {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-.menu__cards .delay-2 {
+.dishes .delay-2 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.menu__cards .delay-3 {
+.dishes .delay-3 {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
 
-.menu__cards .delay-4 {
+.dishes .delay-4 {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-.menu__cards .delay-5 {
+.dishes .delay-5 {
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
 }
 
-.menu__cards .delay-6 {
+.dishes .delay-6 {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
 
-.menu__cards .delay-7 {
+.dishes .delay-7 {
   -webkit-animation-delay: 3.5s;
           animation-delay: 3.5s;
 }
 
-.menu__cards .delay-8 {
+.dishes .delay-8 {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
 }
 
-.menu__cards .delay-9 {
+.dishes .delay-9 {
   -webkit-animation-delay: 4.5s;
           animation-delay: 4.5s;
 }
 
-.menu__cards .delay-10 {
+.dishes .delay-10 {
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
 }
 
-.menu__cards__card {
+.dishes__card {
   background-color: white;
   margin-bottom: 28px;
   border-radius: 15px;
-  list-style: none;
   width: 100%;
   height: 67px;
   padding: 10px;
   -webkit-box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
           box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
-  /* Entrance animation */
+  /* Entrance animations ---------------*/
   -webkit-animation: drop 2s;
           animation: drop 2s;
   -webkit-animation-delay: .7s;
           animation-delay: .7s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  /* ---- */
+  /* -----------------------------------*/
 }
 
 @-webkit-keyframes drop {
@@ -303,19 +298,37 @@ h2 {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .menu__cards__card {
-    width: 48%;
-  }
+.dishes__card:hover .card__description {
+  overflow: hidden;
 }
 
-.menu__cards__card__description {
+.dishes__card:hover .card__price {
+  -webkit-transform: translateX(-210%);
+          transform: translateX(-210%);
+}
+
+.dishes__card:hover .checkbox {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.dishes__card:hover .checkbox i {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.dishes a {
+  text-decoration: none;
+  color: black;
+}
+
+.dishes .card__description p {
   font-weight: 300;
   margin-top: 5px;
   font-size: 15px;
 }
 
-.menu__cards__card__price {
+.dishes .card__price {
   font-weight: 500;
   margin-right: 10px;
   position: relative;
@@ -328,65 +341,15 @@ h2 {
           transition-duration: 500ms;
 }
 
-.menu__cards__card:hover .menu__cards__card__description {
-  overflow: hidden;
-}
-
-.menu__cards__card:hover .menu__cards__card__heading {
-  overflow: hidden;
-}
-
-.menu__cards__card:hover .menu__cards__card__price {
-  -webkit-transform: translateX(-210%);
-          transform: translateX(-210%);
-}
-
-.menu__cards__card:hover .animation {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-.menu__cards__card:hover .animation__icon {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-
-.menu__cards ul {
-  padding: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .menu__cards ul {
-    padding: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.menu__cards ul > li {
-  list-style: none;
-}
-
-.menu__cards a {
-  text-decoration: none;
-  color: black;
-}
-
-.animation {
+.checkbox {
   background-color: #99E2D0;
   width: 20%;
   height: 67.1px;
   position: relative;
   left: 83.1%;
   bottom: 73.5px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,8 +359,6 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition-duration: .5s;
@@ -406,7 +367,7 @@ h2 {
           transform-origin: right;
 }
 
-.animation__icon {
+.checkbox i {
   color: white;
   font-size: 20px;
   -webkit-transform: rotate(180deg);
@@ -437,7 +398,7 @@ h2 {
   background-image: linear-gradient(#ff83dd, #985ede);
 }
 
-/* -- Footer ------------------------------------------*/
+/* Footer -------------------------------------*/
 .footer {
   background-color: #3a3a3a;
   height: 200px;
@@ -451,26 +412,26 @@ h2 {
   margin-bottom: 20px;
 }
 
-.footer__info ul {
+.footer ul {
   padding-left: 0;
 }
 
-.footer__info ul li {
+.footer ul li {
   list-style: none;
   margin-bottom: 7px;
 }
 
-.footer__info a {
+.footer a {
   color: white;
   text-decoration: none;
 }
 
-.footer__info__icon--clutery {
+.footer .clutery :nth-child(1) {
   font-size: 14px;
   margin-right: 11px;
 }
 
-.footer__info__icon--hands {
+.footer .hands :nth-child(1) {
   font-size: 11.5px;
   margin-right: 9px;
 }
