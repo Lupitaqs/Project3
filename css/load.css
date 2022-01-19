@@ -1,0 +1,59 @@
+.circles {
+  background-color: #3a3a3a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 0%;
+}
+
+.circles__wrapper {
+  width: 40%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.circles__wrapper > i {
+  font-size: 23px;
+}
+
+.circles :nth-child(1) {
+  color: #99E2D0;
+}
+
+.circles :nth-child(2) {
+  color: transparent;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left top, right top, from(#99E2D0), to(#FF79DA));
+  background-image: linear-gradient(to right, #99E2D0, #FF79DA);
+  display: inline-block;
+  font-size: 23px;
+}
+
+.circles :nth-child(3) {
+  color: #FF79DA;
+}
+
+.circles :nth-child(4) {
+  color: transparent;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to right, #FF79DA, #9356DC);
+  display: inline-block;
+  font-size: 23px;
+}
+
+.circles :nth-child(5) {
+  color: #9356DC;
+}
+/*# sourceMappingURL=load.css.map */
