@@ -437,7 +437,9 @@ h2 {
 
 /* Loader  --------------------------------------------*/
 .circles {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -448,7 +450,7 @@ h2 {
   height: 100vh;
   width: 100vw;
   z-index: 10;
-  margin-top: -15px;
+  margin-top: -28px;
   background-color: #3a3a3a;
 }
 
