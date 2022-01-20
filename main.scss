@@ -155,101 +155,102 @@ h2 {
             justify-content: space-around;
         } 
 
-        &__card {
-            background-color: white;
-            margin-bottom: 28px;
-            border-radius: 15px;
-            list-style: none;
-            width: 100%;
-            height: 255px;
-            @include boxshadow;
-            
-            @include tablet {
-                width: 45%;
-            }
-
-            a {
-                text-decoration: none;
-                color: black; 
-            }
-
-            img {
-                object-fit: cover;
-                width: 100%;
-                height: 70%;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-            }
-
-            h2 {
-                margin: 10px 0 5px 12px;
-                width: 70%;
-            }
-
-            p {
-                margin: 0 0 10px 12px;
-                font-weight: 300;
-                font-size: 17px;
-                width: 50%;
-            }
-
-            &__btn {
-                position: relative;
-                left: 83%;
-                bottom: 55px;
-                font-size: 24px;
-                width: 40px;
-                height: 35px;
-                background: transparent;
-                cursor: pointer;
-                border: none;
-
-                &:hover {
-                    .restaurants__cards__card__btn--coloured {
-                        transform: scale(1);
-                        animation: likebtn 500ms;
-                    }
-                }
-                
-                &--no_coloured {
-                    position: relative;
-                    bottom: 0px;
-                    left: auto;
-                    color: black;
-
-                }
-                
-                &--coloured {
-                    position: relative;
-                    bottom: 28.5px;
-                    left: -4px;
-                    color: transparent;
-                    background-clip: text;
-                    background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
-                    display: inline-block;
-                    transform: scale(0);
-                    transform-origin: 50% 35%;
-                    
-                    @keyframes likebtn {
-                        from {
-                            transform: scale(0);
-                            opacity: 0;
-                        }
-                        to {
-                            transform: scale(1);
-                            opacity: 1;
-                        }
-                    }
-                    
-                    &:hover {
-                        transform: scale(1);
-                    }
-                }
-            }
-        }
     }
 }
 
+.card {
+    background-color: white;
+    margin-bottom: 28px;
+    border-radius: 15px;
+    list-style: none;
+    width: 100%;
+    height: 255px;
+    @include boxshadow;
+    
+    @include tablet {
+        width: 45%;
+    }
+
+    a {
+        text-decoration: none;
+        color: black; 
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 70%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    &__title {
+        margin: 10px 0 5px 12px;
+        width: 70%;
+    }
+
+    &__info {
+        margin: 0 0 10px 12px;
+        font-weight: 300;
+        font-size: 17px;
+        width: 50%;
+    }
+
+    &__btn {
+        position: relative;
+        left: 83%;
+        bottom: 55px;
+        font-size: 24px;
+        width: 40px;
+        height: 35px;
+        background: transparent;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            .fas {
+                transform: scale(1);
+                animation: likebtn 500ms;
+            }
+        }
+                
+        .far {
+            position: absolute;
+            bottom: -53px;
+            left: -24px;
+            color: black;
+
+        }
+        
+        .fas {
+            position: relative;
+            bottom: -56px;
+            left: -24px;
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
+            display: inline-block;
+            transform: scale(0);
+            transform-origin: 50% 35%;
+            
+            @keyframes likebtn {
+                from {
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            
+            &:hover {
+                transform: scale(1);
+            }
+        }
+    } 
+}
+    
 .new {
     color: darken($tertiary-colour, 40%);
     background-color: $tertiary-colour;
@@ -271,4 +272,76 @@ h2 {
 /* -- Footer ------------------------------------------*/
 @include footer;
 
+/* Loader  --------------------------------------------*/
+.circles {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    margin-top: -15px;
+    background-color: #3a3a3a;
+    //animation-name: fade;
+    //animation-duration: 1.5s;
+    //animation-timing-function: linear;
+    //animation-delay: 3s;
+    //animation-fill-mode: forwards;
+
+    @keyframes fade {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(100%);
+        }
+    }
+
+    & > i {
+        font-size: 23px;
+        margin: 5px;
+        animation: loading 4s ease-in-out infinite;
+        animation-timing-function: cubic-bezier(.29,.56,.75,.5);
+        animation-fill-mode: both;
+    }
+
+    & :nth-child(1) {
+        color: #99E2D0;
+    }
+
+    & :nth-child(2) {
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(to right, #99E2D0 , #FF79DA);
+        font-size: 23px;
+    }
+
+    & :nth-child(3) {
+        color: #FF79DA;
+    }
+
+    & :nth-child(4) {
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(to right, #FF79DA , #9356DC);
+        font-size: 23px;
+    }
+
+    & :nth-child(5) {
+        color: #9356DC;
+    }
+
+    @keyframes loading {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
     

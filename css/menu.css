@@ -25,6 +25,11 @@ h2 {
   font-weight: 450;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* -- Home Page header --------------------------------*/
 .header {
   display: -webkit-box;
@@ -315,11 +320,6 @@ h2 {
 .dishes__card:hover .checkbox i {
   -webkit-transform: rotate(0);
           transform: rotate(0);
-}
-
-.dishes a {
-  text-decoration: none;
-  color: black;
 }
 
 .dishes .card__description p {

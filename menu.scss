@@ -17,6 +17,11 @@ h2 {
     font-size: 18px;
     font-weight: 450;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
 /* -- Home Page header --------------------------------*/
 .header {
     display: flex;
@@ -202,11 +207,6 @@ h2 {
         }
     }
    
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
     .card {
         &__description {
             @extend %ellipsis;
@@ -267,6 +267,7 @@ h2 {
 
 /* Footer -------------------------------------*/
 @include footer;
+
 
 
 

@@ -1,4 +1,4 @@
-.circles {
+body {
   background-color: #3a3a3a;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,47 +13,78 @@
   margin: 0%;
 }
 
-.circles__wrapper {
-  width: 40%;
-  height: auto;
+body .circles {
+  width: 150px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.circles__wrapper > i {
+body .circles > i {
   font-size: 23px;
+  -webkit-animation: loading 4s ease-in-out infinite;
+          animation: loading 4s ease-in-out infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.29, 0.56, 0.75, 0.5);
+          animation-timing-function: cubic-bezier(0.29, 0.56, 0.75, 0.5);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-.circles :nth-child(1) {
+body :nth-child(1) {
   color: #99E2D0;
 }
 
-.circles :nth-child(2) {
+body :nth-child(2) {
   color: transparent;
   background-clip: text;
   background-image: -webkit-gradient(linear, left top, right top, from(#99E2D0), to(#FF79DA));
   background-image: linear-gradient(to right, #99E2D0, #FF79DA);
-  display: inline-block;
   font-size: 23px;
 }
 
-.circles :nth-child(3) {
+body :nth-child(3) {
   color: #FF79DA;
 }
 
-.circles :nth-child(4) {
+body :nth-child(4) {
   color: transparent;
   background-clip: text;
   background-image: -webkit-gradient(linear, left top, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to right, #FF79DA, #9356DC);
-  display: inline-block;
   font-size: 23px;
 }
 
-.circles :nth-child(5) {
+body :nth-child(5) {
   color: #9356DC;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=load.css.map */
