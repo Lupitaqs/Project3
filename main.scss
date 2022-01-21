@@ -283,11 +283,11 @@ h2 {
     z-index: 10;
     margin-top: -28px;
     background-color: #3a3a3a;
-    //animation-name: fade;
-    //animation-duration: 1.5s;
-    //animation-timing-function: linear;
-    //animation-delay: 3s;
-    //animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
 
     @keyframes fade {
         0% {
@@ -301,8 +301,7 @@ h2 {
     & > i {
         font-size: 23px;
         margin: 5px;
-        animation: loading 4s ease-in-out infinite;
-        animation-timing-function: cubic-bezier(.29,.56,.75,.5);
+        animation: loading 4s infinite;
         animation-fill-mode: both;
     }
 
@@ -315,10 +314,12 @@ h2 {
         background-clip: text;
         background-image: linear-gradient(to right, #99E2D0 , #FF79DA);
         font-size: 23px;
+        animation-duration: 4.5s;
     }
 
     & :nth-child(3) {
         color: #FF79DA;
+        animation-delay: 1s;
     }
 
     & :nth-child(4) {
@@ -326,10 +327,12 @@ h2 {
         background-clip: text;
         background-image: linear-gradient(to right, #FF79DA , #9356DC);
         font-size: 23px;
+        animation-delay: 2s;
     }
 
     & :nth-child(5) {
         color: #9356DC;
+        animation-delay: 3s;
     }
 
     @keyframes loading {
