@@ -2,13 +2,6 @@
   margin: 22px 0 13px 0;
 }
 
-.dishes .card__description {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: visible;
-  width: 65%;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -124,24 +117,24 @@ a {
   border: none;
 }
 
-.menu__btn:hover .menu__btn--coloured {
+.menu__btn:hover .fas {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-animation: likebtn 500ms;
           animation: likebtn 500ms;
 }
 
-.menu__btn--no_coloured {
-  position: relative;
-  top: 0px;
-  left: auto;
+.menu__btn .far {
+  position: absolute;
+  bottom: 47px;
+  right: 95%;
   color: black;
 }
 
-.menu__btn--coloured {
+.menu__btn .fas {
   position: relative;
-  top: -30px;
-  left: -12%;
+  bottom: 39px;
+  right: 76.6%;
   color: transparent;
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
@@ -180,10 +173,10 @@ a {
 }
 
 .menu__btn--modifier {
-  left: 78%;
+  left: 85%;
 }
 
-.menu__btn--modifier + .menu__btn--coloured {
+.menu__btn--modifier + .fas {
   left: 65%;
 }
 
@@ -304,22 +297,53 @@ a {
 }
 
 .dishes__card:hover .card__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
+  width: 65%;
 }
 
 .dishes__card:hover .card__price {
-  -webkit-transform: translateX(-210%);
-          transform: translateX(-210%);
+  -webkit-transform: translateX(-170%);
+          transform: translateX(-170%);
 }
 
 .dishes__card:hover .checkbox {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation-name: dishAdded;
+          animation-name: dishAdded;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .dishes__card:hover .checkbox i {
   -webkit-transform: rotate(0);
           transform: rotate(0);
+}
+
+.dishes .card__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 5px;
 }
 
 .dishes .card__description p {
@@ -330,10 +354,17 @@ a {
 
 .dishes .card__price {
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 15px;
+  padding: 5px;
   margin-right: 10px;
   position: relative;
-  left: 88%;
-  bottom: 18.5px;
+  left: 87%;
+  bottom: 24px;
   display: inline-block;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -343,11 +374,11 @@ a {
 
 .checkbox {
   background-color: #99E2D0;
-  width: 20%;
+  width: 19%;
   height: 67.1px;
-  position: relative;
-  left: 83.1%;
-  bottom: 73.5px;
+  position: absolute;
+  left: 81%;
+  bottom: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: -webkit-box;
@@ -359,12 +390,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  display: none;
 }
 
 .checkbox i {
@@ -374,6 +400,24 @@ a {
           transform: rotate(180deg);
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
+}
+
+@-webkit-keyframes dishAdded {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 19%;
+  }
+}
+
+@keyframes dishAdded {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 19%;
+  }
 }
 
 .btn {

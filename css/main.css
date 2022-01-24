@@ -72,7 +72,7 @@ h2 {
   padding: 15px 0;
 }
 
-.main__loc #loc-icon {
+.main__loc i {
   margin-right: 15px;
 }
 
@@ -171,7 +171,7 @@ h2 {
   }
 }
 
-.steps__step {
+.step {
   background-color: #F5F5F5;
   margin-bottom: 28px;
   margin-left: 10px;
@@ -184,7 +184,7 @@ h2 {
           transition-duration: 400ms;
 }
 
-.steps__step--number {
+.step--number {
   background-color: #9356DC;
   border-radius: 100%;
   padding: 4px 8px;
@@ -195,7 +195,7 @@ h2 {
   right: 40px;
 }
 
-.steps__step--icon {
+.step i {
   color: #767676;
   font-size: 20px;
   position: relative;
@@ -204,22 +204,22 @@ h2 {
   margin-right: 13px;
 }
 
-.steps__step:hover {
+.step:hover {
   background-color: #f2eafb;
 }
 
-.steps__step:hover + .steps__step--icon {
+.step:hover + i {
   color: #9356DC;
 }
 
 @media screen and (min-width: 768px) {
-  .steps__step {
+  .step {
     width: 70%;
   }
 }
 
 @media screen and (min-width: 1100px) {
-  .steps__step {
+  .step {
     width: 30%;
     height: 90px;
     padding-top: 30px;
@@ -452,12 +452,8 @@ h2 {
   z-index: 10;
   margin-top: -28px;
   background-color: #3a3a3a;
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: fade 1.5s linear;
+          animation: fade 1.5s linear;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   -webkit-animation-fill-mode: forwards;
