@@ -629,12 +629,16 @@ h2 {
   font-size: 23px;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 .circles :nth-child(5) {
   color: #9356DC;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+  -webkit-animation-duration: 2.7s;
+          animation-duration: 2.7s;
 }
 
 @-webkit-keyframes loading {

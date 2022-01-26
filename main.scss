@@ -407,11 +407,13 @@ h2 {
         background-image: linear-gradient(to right, #FF79DA , #9356DC);
         font-size: 23px;
         animation-delay: 2s;
+        animation-duration: 3s;
     }
 
     & :nth-child(5) {
         color: #9356DC;
         animation-delay: 3s;
+        animation-duration: 2.7s;
     }
 
     @keyframes loading {
