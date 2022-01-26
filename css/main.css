@@ -19,7 +19,6 @@ h2 {
 
 /* -- Home Page header --------------------------------*/
 .header {
-  /*border: 1px solid red; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,6 +29,10 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0 4px 4px rgba(100, 100, 111, 0.253);
+          box-shadow: 0 4px 4px rgba(100, 100, 111, 0.253);
+  padding: 15px 0;
+  margin: 0 0 4px 0;
 }
 
 .header__logo {
@@ -37,9 +40,36 @@ h2 {
   height: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    height: 10vh;
+  }
+  .header__logo {
+    width: 40%;
+    height: auto;
+    width: 30%;
+  }
+}
+
 @media screen and (min-width: 992px) {
-  .header .header__logo {
-    max-height: 60px;
+  .header {
+    height: 12vh;
+  }
+  .header__logo {
+    width: 40%;
+    height: auto;
+    width: 25vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header {
+    max-height: 10vh;
+  }
+  .header__logo {
+    width: 40%;
+    height: auto;
+    max-width: 20%;
   }
 }
 
@@ -60,7 +90,6 @@ h2 {
 }
 
 .main__loc {
-  border-top: 2px solid #C0C0C0;
   background-color: #ebebeb;
   width: 100%;
   display: -webkit-box;
@@ -117,7 +146,6 @@ h2 {
 
 /* -- How it works section ----------------------------*/
 .steps {
-  /*border: 1px solid red; */
   height: 450px;
   padding: 50px 20px 50px 25px;
   display: -webkit-box;
@@ -134,10 +162,30 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100vw;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 992px) {
+  .steps {
+    height: 38vh;
+  }
+  .steps .steps__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    width: 95vw;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .steps {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -149,6 +197,9 @@ h2 {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     height: 290px;
+  }
+  .steps .steps__wrapper {
+    width: 90vw;
   }
 }
 
@@ -168,6 +219,12 @@ h2 {
   .steps__heading {
     width: 100%;
     height: 30px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .steps__heading {
+    padding-left: 3vw;
   }
 }
 
@@ -208,17 +265,23 @@ h2 {
   background-color: #f2eafb;
 }
 
-.step:hover + i {
+.step:hover .fas {
   color: #9356DC;
 }
 
 @media screen and (min-width: 768px) {
   .step {
-    width: 70%;
+    width: 70vw;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 992px) {
+  .step {
+    width: 27vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .step {
     width: 30%;
     height: 90px;
@@ -234,6 +297,12 @@ h2 {
 
 .restaurants__heading {
   margin-bottom: 23px;
+}
+
+@media screen and (min-width: 1400px) {
+  .restaurants__heading {
+    padding-left: 3vw;
+  }
 }
 
 .restaurants__cards {
@@ -258,6 +327,26 @@ h2 {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .restaurants__cards {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 90vw;
+    margin-left: 4vw;
+  }
+  .restaurants__cards .card {
+    margin-bottom: 7vh;
+  }
+}
+
 .card {
   background-color: white;
   margin-bottom: 28px;
@@ -267,11 +356,26 @@ h2 {
   height: 255px;
   -webkit-box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
           box-shadow: 0px 5px 15px -2px rgba(100, 100, 111, 0.226);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 2px 8px 18px 0px rgba(100, 100, 111, 0.384);
+          box-shadow: 2px 8px 18px 0px rgba(100, 100, 111, 0.384);
 }
 
 @media screen and (min-width: 768px) {
   .card {
     width: 45%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .card {
+    width: 40%;
   }
 }
 
@@ -342,6 +446,12 @@ h2 {
           transform-origin: 50% 35%;
 }
 
+@media screen and (min-width: 768px) {
+  .card__btn .fas {
+    left: -23.9588px;
+  }
+}
+
 @-webkit-keyframes likebtn {
   from {
     -webkit-transform: scale(0);
@@ -391,7 +501,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1400px) {
   .new {
     left: 80%;
   }
@@ -447,7 +557,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
   z-index: 10;
   margin-top: -28px;

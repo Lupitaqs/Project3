@@ -114,10 +114,6 @@
     }
 }
 
-@mixin desktop-header {
-    @include desktop {
-        & .header__logo {
-            max-height: 60px;
-        }
-    }
-}
+
+
+

@@ -37,11 +37,16 @@ a {
         color: black;
         
         @include tablet {
-            top: 5%;
+            top: 4%;
         }
     }
 
-    @include desktop-header;
+    @include tablet {
+        height: 6vh;
+        @include header-logo {
+            width: 30vw;
+        }
+    }
 }
 
 /* -- Cover pic ---------------------------------------*/
@@ -49,6 +54,7 @@ a {
     object-fit: cover;
     position: absolute;
     width: 100vw;
+    height: 60vh;
     z-index: 1;
 }
 
@@ -65,6 +71,11 @@ a {
     flex-flow: column wrap;
     margin-bottom: 200px; 
 
+    @include tablet {
+        display: flex;
+        align-content: center;
+    }
+    
     @include desktop {
         padding: 35px 27px;
     }
@@ -107,7 +118,7 @@ a {
         .fas {
             position: relative;
             bottom: 39px;
-            right: 76.6%;
+            right: 76%;
             color: transparent;
             background-clip: text;
             background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
@@ -162,6 +173,14 @@ a {
         }
     }
 
+    @include desktop {
+        width: 85vw;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: baseline;
+        height: 30vh;
+    }
+
    &__card {
         background-color: white;
         margin-bottom: 28px;
@@ -170,6 +189,15 @@ a {
         height: 67px;
         padding: 10px;
         @include boxshadow;
+
+        @include tablet {
+            width: 85vw;
+        }
+
+        @include desktop {
+            width: 40vw;
+            margin-left: 1.5%;
+        }
 
         /* Entrance animations ---------------*/
         animation: drop 2s;
@@ -198,19 +226,28 @@ a {
             
             .card__price {
                 transform: translateX(-170%);
+
+                @include tablet {
+                    transform: translateX(-215%);
+                }
+
+                @include desktop {
+                    transform: translateX(-185%);
+                }
             }
     
             .checkbox {
                 //transform: scaleX(1);
                 display: flex;
                 animation-name: dishAdded;
-                animation-duration: 0.3s;
+                animation-duration: 0.35s;
                 animation-timing-function: linear;
                 animation-delay: 0s;
                 animation-fill-mode: forwards;
         
                 i {
-                    transform: rotate(0);
+                    //transform: rotate(0);
+                    animation: .3s linear 0s rotateIcon;
                 }
             }
         }
@@ -256,8 +293,9 @@ a {
     width: 19%;
     height: 67.1px;
     position: absolute;
-    left: 81%;
+    //left: 81%;
     bottom: 0;
+    right: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     display: flex;
@@ -272,8 +310,8 @@ a {
     i {
         color: white;
         font-size: 20px;
-        transform: rotate(180deg);
-        transition-duration: .5s;
+        //transform: rotate(180deg);
+        //transition-duration: .5s;
     }
 
     @keyframes dishAdded {
@@ -284,6 +322,22 @@ a {
             width: 19%;
         }
     }
+
+    @keyframes rotateIcon {
+        0% {
+            transform: rotate(-270deg);
+            opacity: 0;
+        }
+        30%{
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+      }
 }
 
 .btn {

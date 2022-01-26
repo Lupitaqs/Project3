@@ -51,13 +51,18 @@ a {
 
 @media screen and (min-width: 768px) {
   .header__icon {
-    top: 5%;
+    top: 4%;
   }
 }
 
-@media screen and (min-width: 992px) {
-  .header .header__logo {
-    max-height: 60px;
+@media screen and (min-width: 768px) {
+  .header {
+    height: 6vh;
+  }
+  .header__logo {
+    width: 40%;
+    height: auto;
+    width: 30vw;
   }
 }
 
@@ -67,6 +72,7 @@ a {
      object-fit: cover;
   position: absolute;
   width: 100vw;
+  height: 60vh;
   z-index: 1;
 }
 
@@ -87,6 +93,16 @@ a {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   margin-bottom: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -134,7 +150,7 @@ a {
 .menu__btn .fas {
   position: relative;
   bottom: 39px;
-  right: 76.6%;
+  right: 76%;
   color: transparent;
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
@@ -251,6 +267,23 @@ a {
           animation-delay: 5s;
 }
 
+@media screen and (min-width: 992px) {
+  .dishes {
+    width: 85vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    height: 30vh;
+  }
+}
+
 .dishes__card {
   background-color: white;
   margin-bottom: 28px;
@@ -268,6 +301,19 @@ a {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   /* -----------------------------------*/
+}
+
+@media screen and (min-width: 768px) {
+  .dishes__card {
+    width: 85vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .dishes__card {
+    width: 40vw;
+    margin-left: 1.5%;
+  }
 }
 
 @-webkit-keyframes drop {
@@ -308,14 +354,28 @@ a {
           transform: translateX(-170%);
 }
 
+@media screen and (min-width: 768px) {
+  .dishes__card:hover .card__price {
+    -webkit-transform: translateX(-215%);
+            transform: translateX(-215%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .dishes__card:hover .card__price {
+    -webkit-transform: translateX(-185%);
+            transform: translateX(-185%);
+  }
+}
+
 .dishes__card:hover .checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-animation-name: dishAdded;
           animation-name: dishAdded;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-delay: 0s;
@@ -325,8 +385,8 @@ a {
 }
 
 .dishes__card:hover .checkbox i {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  -webkit-animation: .3s linear 0s rotateIcon;
+          animation: .3s linear 0s rotateIcon;
 }
 
 .dishes .card__description {
@@ -377,8 +437,8 @@ a {
   width: 19%;
   height: 67.1px;
   position: absolute;
-  left: 81%;
   bottom: 0;
+  right: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: -webkit-box;
@@ -396,10 +456,6 @@ a {
 .checkbox i {
   color: white;
   font-size: 20px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
 }
 
 @-webkit-keyframes dishAdded {
@@ -417,6 +473,42 @@ a {
   }
   100% {
     width: 19%;
+  }
+}
+
+@-webkit-keyframes rotateIcon {
+  0% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateIcon {
+  0% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
