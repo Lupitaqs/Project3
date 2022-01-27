@@ -119,7 +119,9 @@ a {
             position: relative;
             bottom: 39px;
             right: 76%;
+            -webkit-text-fill-color: transparent;
             color: transparent;
+            -webkit-background-clip: text;
             background-clip: text;
             background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
             display: inline-block;

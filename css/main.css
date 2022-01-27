@@ -638,8 +638,8 @@ h2 {
   color: #9356DC;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
-  -webkit-animation-duration: 2.7s;
-          animation-duration: 2.7s;
+  -webkit-animation-duration: 2.8s;
+          animation-duration: 2.8s;
 }
 
 @-webkit-keyframes loading {

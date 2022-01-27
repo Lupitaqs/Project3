@@ -301,7 +301,9 @@ h2 {
             position: relative;
             bottom: -56px;
             left: -24px;
+            -webkit-text-fill-color: transparent;
             color: transparent;
+            -webkit-background-clip: text;
             background-clip: text;
             background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
             display: inline-block;
@@ -384,7 +386,9 @@ h2 {
     }
 
     & :nth-child(2) {
+        -webkit-text-fill-color: transparent;
         color: transparent;
+        -webkit-background-clip: text;
         background-clip: text;
         background-image: linear-gradient(to right, #99E2D0 , #FF79DA);
         font-size: 23px;
@@ -397,7 +401,9 @@ h2 {
     }
 
     & :nth-child(4) {
+        -webkit-text-fill-color: transparent;
         color: transparent;
+        -webkit-background-clip: text;
         background-clip: text;
         background-image: linear-gradient(to right, #FF79DA , #9356DC);
         font-size: 23px;
@@ -408,7 +414,7 @@ h2 {
     & :nth-child(5) {
         color: #9356DC;
         animation-delay: 3s;
-        animation-duration: 2.7s;
+        animation-duration: 2.8s;
     }
 
     @keyframes loading {
