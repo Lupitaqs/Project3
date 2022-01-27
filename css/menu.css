@@ -72,7 +72,7 @@ a {
      object-fit: cover;
   position: absolute;
   width: 100vw;
-  height: 60vh;
+  height: 40vh;
   z-index: 1;
 }
 
@@ -151,7 +151,9 @@ a {
   position: relative;
   bottom: 39px;
   right: 76%;
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);

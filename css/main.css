@@ -435,7 +435,9 @@ h2 {
   position: relative;
   bottom: -56px;
   left: -24px;
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
@@ -476,11 +478,6 @@ h2 {
             transform: scale(1);
     opacity: 1;
   }
-}
-
-.card__btn .fas:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .new {
@@ -606,7 +603,9 @@ h2 {
 }
 
 .circles :nth-child(2) {
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: -webkit-gradient(linear, left top, right top, from(#99E2D0), to(#FF79DA));
   background-image: linear-gradient(to right, #99E2D0, #FF79DA);
@@ -622,7 +621,9 @@ h2 {
 }
 
 .circles :nth-child(4) {
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: -webkit-gradient(linear, left top, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to right, #FF79DA, #9356DC);
