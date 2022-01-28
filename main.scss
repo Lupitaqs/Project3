@@ -234,10 +234,13 @@ h2 {
     @include boxshadow;
     transform: scale(1);
 
-    &:hover {
-        transform: scale(1.02);
-        box-shadow: 2px 8px 18px 0px $box-shadow--dark;
+    @include desktop {
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 2px 8px 18px 0px $box-shadow--dark;
+        }  
     }
+    
     
     @include tablet {
         width: 45%;
@@ -342,7 +345,7 @@ h2 {
         left: 78%;
     }
     @include bigscreen {
-        left: 80%;
+        left: 82%;
     }
 }
 
@@ -414,7 +417,7 @@ h2 {
     & :nth-child(5) {
         color: #9356DC;
         animation-delay: 3s;
-        animation-duration: 2.8s;
+        animation-duration: 2.4s;
     }
 
     @keyframes loading {

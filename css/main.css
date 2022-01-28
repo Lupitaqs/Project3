@@ -360,11 +360,13 @@ h2 {
           transform: scale(1);
 }
 
-.card:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-box-shadow: 2px 8px 18px 0px rgba(100, 100, 111, 0.384);
-          box-shadow: 2px 8px 18px 0px rgba(100, 100, 111, 0.384);
+@media screen and (min-width: 992px) {
+  .card:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-box-shadow: 2px 8px 18px 0px rgba(100, 100, 111, 0.384);
+            box-shadow: 2px 8px 18px 0px rgba(100, 100, 111, 0.384);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -500,7 +502,7 @@ h2 {
 
 @media screen and (min-width: 1400px) {
   .new {
-    left: 80%;
+    left: 82%;
   }
 }
 
@@ -638,8 +640,8 @@ h2 {
   color: #9356DC;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
-  -webkit-animation-duration: 2.8s;
-          animation-duration: 2.8s;
+  -webkit-animation-duration: 2.4s;
+          animation-duration: 2.4s;
 }
 
 @-webkit-keyframes loading {
