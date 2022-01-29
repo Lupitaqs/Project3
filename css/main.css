@@ -561,29 +561,43 @@ h2 {
   z-index: 10;
   margin-top: -28px;
   background-color: white;
-  -webkit-animation: fade 1.5s linear;
-          animation: fade 1.5s linear;
+  -webkit-animation: fade 6.5s linear;
+          animation: fade 6.5s linear;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  opacity: 0.98;
+  opacity: 0.99;
 }
 
 @-webkit-keyframes fade {
   0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
     opacity: 1;
   }
+  5% {
+    opacity: 0;
+  }
   100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
     opacity: 0;
   }
 }
 
 @keyframes fade {
   0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
     opacity: 1;
   }
+  5% {
+    opacity: 0;
+  }
   100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
     opacity: 0;
   }
 }
