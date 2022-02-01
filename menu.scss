@@ -1,5 +1,5 @@
 @import "./utils/variables";
-@import "./utils/functions";
+@import "./utils/keyframes";
 @import "./utils/mixins";
 @import "./utils/placeholders";
 
@@ -36,17 +36,21 @@ a {
         left: 6%;
         color: black;
         
+        // Responsive ---------------
         @include tablet {
             top: 4%;
         }
+        // --------------------------
     }
 
+    // Responsive -------------------
     @include tablet {
         height: 6vh;
         @include header-logo {
             width: 30vw;
         }
     }
+    //-------------------------------
 }
 
 /* -- Cover pic ---------------------------------------*/
@@ -71,6 +75,7 @@ a {
     flex-flow: column wrap;
     margin-bottom: 200px; 
 
+    // Responsive -----------------------
     @include tablet {
         display: flex;
         align-content: center;
@@ -79,6 +84,7 @@ a {
     @include desktop {
         padding: 35px 27px;
     }
+    //-----------------------------------
 
     &__heading {
         font-family: $font-sh;
@@ -90,6 +96,7 @@ a {
         }
     }
 
+    // Like heart btn -------------------
     &__btn {
         position: absolute;
         left: 80%;
@@ -117,7 +124,7 @@ a {
 
         .fas {
             position: relative;
-            bottom: 39px;
+            bottom: 37.7px;
             right: 76%;
             -webkit-text-fill-color: transparent;
             color: transparent;
@@ -127,32 +134,23 @@ a {
             display: inline-block;
             transform: scale(0);
             transform-origin: 50% 35%;
-            
-            @keyframes likebtn {
-                from {
-                    transform: scale(0);
-                    opacity: 0;
-                }
-                to {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-            }
         }
 
-        &--modifier {
+        &--modifier { // The enchanted plate 
             left: 85%;
             & + .fas {
                 left: 65%;
             }
         }
 
+        // Responsive -------------------
         @include tablet {
             left: 85%;
             & .menu__btn--coloured {
                 left: 73%;
             }
         }
+        //-------------------------------
     }
 
     &__subheading {
@@ -176,6 +174,7 @@ a {
         }
     }
 
+    // Responsive ------------------------
     @include desktop {
         width: 85vw;
         display: flex;
@@ -183,6 +182,7 @@ a {
         justify-content: baseline;
         height: 30vh;
     }
+    // -----------------------------------
 
    &__card {
         background-color: white;
@@ -193,6 +193,7 @@ a {
         padding: 10px;
         @include boxshadow;
 
+        // Responsive -----------------
         @include tablet {
             width: 85vw;
         }
@@ -201,22 +202,13 @@ a {
             width: 40vw;
             margin-left: 1.5%;
         }
+        // -----------------------------
 
         /* Entrance animations ---------------*/
         animation: drop 2s;
         animation-delay: .7s;
         animation-fill-mode: both;
 
-        @keyframes drop {
-            0% {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-        }
         /* -----------------------------------*/
 
         &:hover {
@@ -227,17 +219,22 @@ a {
             .card__price {
                 transform: translateX(-160%);
 
+                // Responsive ---------------------
                 @include tablet {
-                    transform: translateX(-215%);
+                    transform: translateX(-295%);
                 }
 
                 @include desktop {
-                    transform: translateX(-185%);
+                    transform: translateX(-180%);
                 }
+
+                @include bigscreen {
+                    transform: translateX(-250%);
+                }
+                // --------------------------------
             }
     
             .checkbox {
-                //transform: scaleX(1);
                 display: flex;
                 animation-name: dishAdded;
                 animation-duration: 0.35s;
@@ -246,7 +243,6 @@ a {
                 animation-fill-mode: forwards;
         
                 i {
-                    //transform: rotate(0);
                     animation: .3s linear 0s rotateIcon;
                 }
             }
@@ -296,6 +292,20 @@ a {
             
             transform: translateX(0);
             transition-duration: 500ms;
+
+            // Responsive -----------------
+            @include tablet {
+                left: 92%;
+            }
+
+            @include desktop {
+                left: 88%;
+            }
+
+            @include bigscreen {
+                left: 91%;
+            }
+            // ----------------------------
         }
     }    
 }
@@ -305,7 +315,6 @@ a {
     width: 17%;
     height: 67.1px;
     position: absolute;
-    //left: 81%;
     bottom: 0;
     right: 0;
     border-top-right-radius: 15px;
@@ -315,41 +324,10 @@ a {
     justify-content: center;
     display: none;
 
-    //transform: scaleX(0);
-    //transition-duration: .5s;
-    //transform-origin: right;
-
     i {
         color: white;
         font-size: 20px;
-        //transform: rotate(180deg);
-        //transition-duration: .5s;
     }
-
-    @keyframes dishAdded {
-        0% {
-            width: 0px;
-          }
-        100% {
-            width: 17%;
-        }
-    }
-
-    @keyframes rotateIcon {
-        0% {
-            transform: rotate(-270deg);
-            opacity: 0;
-        }
-        30%{
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            transform: rotate(0deg);
-        }
-      }
 }
 
 .btn {

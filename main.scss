@@ -1,5 +1,5 @@
 @import "./utils/variables";
-@import "./utils/functions";
+@import "./utils/keyframes";
 @import "./utils/mixins";
 @import "./utils/placeholders";
 
@@ -292,7 +292,8 @@ h2 {
                 animation: likebtn 500ms;
             }
         }
-                
+        
+        // Empty heart
         .far {
             position: absolute;
             bottom: -53px;
@@ -300,6 +301,7 @@ h2 {
             color: black;
         }
         
+        // Gradient heart
         .fas {
             position: relative;
             bottom: -56px;
@@ -315,17 +317,6 @@ h2 {
 
             @include tablet {
                 left: -23.9588px;
-            }
-            
-            @keyframes likebtn {
-                from {
-                    transform: scale(0);
-                    opacity: 0;
-                }
-                to {
-                    transform: scale(1);
-                    opacity: 1;
-                }
             }
         }
     } 
@@ -362,27 +353,11 @@ h2 {
     width: 100vw;
     z-index: 10;
     margin-top: -28px;
-    //background-color: #3a3a3a;
     background-color: white;
-    //animation: fade 1.5s linear;
     animation: fade 6.5s linear;
     animation-delay: 6s;
     animation-fill-mode: forwards;
     opacity: 0.99;
-
-    @keyframes fade {
-        0% {
-            transform: translateY(0%);
-            opacity: 1;
-        }
-        5% {
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(100%);
-            opacity: 0;
-        }
-    }
 
     & > i {
         font-size: 23px;
@@ -426,18 +401,6 @@ h2 {
         color: #9356DC;
         animation-delay: 3s;
         animation-duration: 2.4s;
-    }
-
-    @keyframes loading {
-        0% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
     }
 }
     

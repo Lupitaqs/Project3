@@ -1,0 +1,76 @@
+// like btn @ main.scss and menu.scss ----------------
+@keyframes likebtn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+// Circles @ main.scss -------------------------------
+@keyframes fade {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    5% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+// Entrance animation @ menu.scss -----------------------
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+// Checkbox @ menu.scss ---------------------------------
+@keyframes dishAdded {
+    0% {
+        width: 0px;
+      }
+    100% {
+        width: 17%;
+    }
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(-270deg);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }
