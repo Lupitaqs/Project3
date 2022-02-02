@@ -115,16 +115,18 @@ a {
             }
         }
 
-        .far {
+        // Empty heart
+        .far {  
             position: absolute;
             bottom: 47px;
             right: 95%;
             color: black;
         }
 
+        // Coloured heart
         .fas {
             position: relative;
-            bottom: 37.7px;
+            bottom: 38.5px;
             right: 76%;
             -webkit-text-fill-color: transparent;
             color: transparent;
@@ -136,7 +138,8 @@ a {
             transform-origin: 50% 35%;
         }
 
-        &--modifier { // The enchanted plate 
+        // The enchanted plate
+        &--modifier {  
             left: 85%;
             & + .fas {
                 left: 65%;
