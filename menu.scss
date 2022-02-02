@@ -338,6 +338,7 @@ a {
     width: 190px;
     align-self: center;
     margin: 20px 0 25px 0;
+    cursor: pointer;
 
     @include btn--hover;
 }

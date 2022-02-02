@@ -300,6 +300,7 @@ h2 {
   font-size: 1rem;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
+  cursor: pointer;
 }
 
 .btn:hover {

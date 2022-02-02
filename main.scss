@@ -94,6 +94,7 @@ h2 {
 .btn {
     @include btn;
     transition-duration: 400ms;
+    cursor: pointer;
 
     @include btn--hover;
 }
