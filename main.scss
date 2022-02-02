@@ -29,14 +29,15 @@ h2 {
     margin: 0 0 4px 0;
 
     @include tablet {
-        height: 10vh;
+        max-height: 10vh;
         @include header-logo {
             width: 30%;
         }
     }
 
     @include desktop {
-        height: 12vh;
+        max-height: 12vh;
+        padding: 20px 0 10px 0;
         @include header-logo {
             width: 25vw;
         }
@@ -321,23 +322,18 @@ h2 {
         }
     } 
 }
-    
+ 
+// Green label 
 .new {
     color: darken($tertiary-colour, 40%);
     background-color: $tertiary-colour;
     width: 80px;
     text-align: center;
-    position: relative;
-    left: 72%;
-    bottom: 275px;
+    position: absolute;
+    bottom: 215px;
+    right: 3%;
     padding: 5px 0;
     border-radius: 3px;
-    @include desktop {
-        left: 78%;
-    }
-    @include bigscreen {
-        left: 82%;
-    }
 }
 
 /* -- Footer ------------------------------------------*/

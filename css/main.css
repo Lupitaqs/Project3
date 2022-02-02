@@ -204,7 +204,7 @@ h2 {
 
 @media screen and (min-width: 768px) {
   .header {
-    height: 10vh;
+    max-height: 10vh;
   }
   .header__logo {
     width: 40%;
@@ -215,7 +215,8 @@ h2 {
 
 @media screen and (min-width: 992px) {
   .header {
-    height: 12vh;
+    max-height: 12vh;
+    padding: 20px 0 10px 0;
   }
   .header__logo {
     width: 40%;
@@ -623,23 +624,11 @@ h2 {
   background-color: #99E2D0;
   width: 80px;
   text-align: center;
-  position: relative;
-  left: 72%;
-  bottom: 275px;
+  position: absolute;
+  bottom: 215px;
+  right: 3%;
   padding: 5px 0;
   border-radius: 3px;
-}
-
-@media screen and (min-width: 992px) {
-  .new {
-    left: 78%;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .new {
-    left: 82%;
-  }
 }
 
 /* -- Footer ------------------------------------------*/
