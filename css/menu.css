@@ -416,9 +416,6 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
-    -webkit-box-pack: baseline;
-        -ms-flex-pack: baseline;
-            justify-content: baseline;
     height: 30vh;
   }
 }

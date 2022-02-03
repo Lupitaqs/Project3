@@ -91,6 +91,10 @@ h2 {
     }
 }
 
+a {
+    text-decoration: none;
+}
+
 .btn {
     @include btn;
     transition-duration: 400ms;
