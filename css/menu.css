@@ -296,7 +296,7 @@ a {
           flex-flow: column;
   font-size: 24px;
   cursor: pointer;
-  height: 25px;
+  height: 32px;
 }
 
 .menu .heart--empty {
@@ -401,6 +401,8 @@ a {
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
     height: 30vh;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
   }
 }
 
@@ -431,8 +433,7 @@ a {
 
 @media screen and (min-width: 992px) {
   .dishes__card {
-    width: 40vw;
-    margin-left: 1.5%;
+    width: 41vw;
   }
 }
 
@@ -454,15 +455,8 @@ a {
 
 @media screen and (min-width: 992px) {
   .dishes__card:hover .card__price {
-    -webkit-transform: translateX(-180%);
-            transform: translateX(-180%);
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .dishes__card:hover .card__price {
-    -webkit-transform: translateX(-250%);
-            transform: translateX(-250%);
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
 }
 

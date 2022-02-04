@@ -356,7 +356,7 @@ a {
         margin: 5px;
         animation: loading 4s infinite;
 
-        animation-fill-mode: both;
+        animation-fill-mode:both;
     }
 
     & :nth-child(1) {
@@ -371,6 +371,7 @@ a {
         background-image: linear-gradient(to right, #99E2D0 , #FF79DA);
         font-size: 23px;
         animation-duration: 4.5s;
+ 
     }
 
     & :nth-child(3) {
@@ -395,4 +396,5 @@ a {
         animation-duration: 2.4s;
     }
 }
+
     
