@@ -283,64 +283,48 @@ a {
   font-size: 26px;
 }
 
-.menu__btn {
+.menu .heart {
   position: absolute;
-  left: 80%;
-  top: 40px;
-  font-size: 25px;
-  width: 40px;
-  height: 35px;
-  background: transparent;
+  right: 9%;
+  top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  font-size: 24px;
   cursor: pointer;
-  border: none;
+  height: 25px;
 }
 
-.menu__btn:hover .fas {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-animation: likebtn 500ms;
-          animation: likebtn 500ms;
+.menu .heart--empty {
+  display: inline-block;
 }
 
-.menu__btn .far {
-  position: absolute;
-  bottom: 47px;
-  right: 95%;
-  color: black;
-}
-
-.menu__btn .fas {
+.menu .heart--coloured {
   position: relative;
-  bottom: 38.5px;
-  right: 76%;
+  bottom: 1.8rem;
+  right: .2px;
+  font-size: 24.5px;
   -webkit-text-fill-color: transparent;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
-  display: inline-block;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: 50% 35%;
           transform-origin: 50% 35%;
 }
 
-.menu__btn--modifier {
-  left: 85%;
-}
-
-.menu__btn--modifier + .fas {
-  left: 65%;
-}
-
-@media screen and (min-width: 768px) {
-  .menu__btn {
-    left: 85%;
-  }
-  .menu__btn .menu__btn--coloured {
-    left: 73%;
-  }
+.menu .heart:hover .heart--coloured {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: likebtn 500ms;
+          animation: likebtn 500ms;
 }
 
 .menu__subheading {

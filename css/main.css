@@ -575,53 +575,47 @@ a {
   width: 50%;
 }
 
-.card__btn {
-  position: relative;
-  left: 83%;
-  bottom: 55px;
-  font-size: 24px;
-  width: 40px;
-  height: 35px;
-  background: transparent;
-  cursor: pointer;
-  border: none;
-}
-
-.card__btn:hover .fas {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-animation: likebtn 500ms;
-          animation: likebtn 500ms;
-}
-
-.card__btn .far {
+.heart {
   position: absolute;
-  bottom: -53px;
-  left: -24px;
-  color: black;
+  right: 8%;
+  bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  font-size: 24px;
+  cursor: pointer;
+  height: 25px;
 }
 
-.card__btn .fas {
+.heart--empty {
+  display: inline-block;
+}
+
+.heart--coloured {
   position: relative;
-  bottom: -56px;
-  left: -24px;
+  bottom: 28.8px;
+  font-size: 24.5px;
   -webkit-text-fill-color: transparent;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
-  display: inline-block;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: 50% 35%;
           transform-origin: 50% 35%;
 }
 
-@media screen and (min-width: 768px) {
-  .card__btn .fas {
-    left: -23.9588px;
-  }
+.heart:hover .heart--coloured {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: likebtn 500ms;
+          animation: likebtn 500ms;
 }
 
 .new {

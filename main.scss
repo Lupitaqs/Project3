@@ -279,53 +279,44 @@ a {
         font-weight: 300;
         font-size: 17px;
         width: 50%;
+    } 
+}
+
+// Like btn 
+.heart {
+    //border: 1px solid red;
+    position: absolute;
+    right: 8%;
+    bottom: 32px;
+    display: flex;
+    flex-flow: column;
+    font-size: 24px;
+    cursor: pointer;
+    height: 25px;
+
+    &--empty {
+        display: inline-block;
+    }
+    
+    &--coloured {
+        position: relative;
+        bottom: 28.8px;
+        font-size: 24.5px;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
+        transform: scale(0);
+        transform-origin: 50% 35%;
     }
 
-    &__btn {
-        position: relative;
-        left: 83%;
-        bottom: 55px;
-        font-size: 24px;
-        width: 40px;
-        height: 35px;
-        background: transparent;
-        cursor: pointer;
-        border: none;
-
-        &:hover {
-            .fas {
-                transform: scale(1);
-                animation: likebtn 500ms;
-            }
+    &:hover {
+        .heart--coloured {
+            transform: scale(1);
+            animation: likebtn 500ms;
         }
-        
-        // Empty heart
-        .far {
-            position: absolute;
-            bottom: -53px;
-            left: -24px;
-            color: black;
-        }
-        
-        // Gradient heart
-        .fas {
-            position: relative;
-            bottom: -56px;
-            left: -24px;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
-            display: inline-block;
-            transform: scale(0);
-            transform-origin: 50% 35%;
-
-            @include tablet {
-                left: -23.9588px;
-            }
-        }
-    } 
+    }
 }
  
 // Green label 

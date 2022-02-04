@@ -97,63 +97,41 @@ a {
     }
 
     // Like heart btn -------------------
-    &__btn {
+    .heart {
+        //border: 1px solid red;
         position: absolute;
-        left: 80%;
-        top: 40px;
-        font-size: 25px;
-        width: 40px;
-        height: 35px;
-        background: transparent;
+        right: 9%;
+        top: 2.5rem;
+        display: flex;
+        flex-flow: column;
+        font-size: 24px;
         cursor: pointer;
-        border: none;       
+        height: 25px;
 
-        &:hover {
-            .fas {
-                transform: scale(1);
-                animation: likebtn 500ms;
-            }
+        &--empty {
+            display: inline-block;
         }
-
-        // Empty heart
-        .far {  
-            position: absolute;
-            bottom: 47px;
-            right: 95%;
-            color: black;
-        }
-
-        // Coloured heart
-        .fas {
+        
+        &--coloured {
             position: relative;
-            bottom: 38.5px;
-            right: 76%;            
+            bottom: 1.8rem;
+            right: .2px;
+            font-size: 24.5px;
             -webkit-text-fill-color: transparent;
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
             background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
-            display: inline-block;
             transform: scale(0);
             transform-origin: 50% 35%;
         }
-
-        // The enchanted plate
-        &--modifier {  
-            left: 85%;
-            & + .fas {
-                left: 65%;
+    
+        &:hover {
+            .heart--coloured {
+                transform: scale(1);
+                animation: likebtn 500ms;
             }
         }
-
-        // Responsive -------------------
-        @include tablet {
-            left: 85%;
-            & .menu__btn--coloured {
-                left: 73%;
-            }
-        }
-        //-------------------------------
     }
 
     &__subheading {
