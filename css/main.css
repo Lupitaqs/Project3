@@ -629,20 +629,13 @@ a {
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transform-origin: 50% 35%;
           transform-origin: 50% 35%;
 }
 
 .heart:hover .heart--coloured {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-animation: likebtn 500ms;
-          animation: likebtn 500ms;
-}
-
-.heart:active .heart--coloured {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-animation: likebtn 500ms;
