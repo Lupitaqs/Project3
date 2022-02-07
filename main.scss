@@ -348,7 +348,7 @@ a {
     margin-top: -28px;
     background-image: linear-gradient(to right, #99E2D0 , #FF79DA, #9356DC);
     animation: fade 6.5s linear;
-    animation-delay: 13s;
+    animation-delay: 10s;
     animation-fill-mode: forwards;
     opacity: 0.99;
 
@@ -372,23 +372,23 @@ a {
             transform: scale(0);
     
             &-1 {
-                animation-delay: .5s;
+                animation-delay: .4s;
             }
     
             &-2 {
-                animation-delay: 1s;
+                animation-delay: .8s;
             }
     
             &-3 {
-                animation-delay: 1.5s;
+                animation-delay: 1.2s;
             }
         
             &-4 {
-                animation-delay: 2s;
+                animation-delay: 1.6s;
             }
         
             &-5 {
-                animation-delay: 2.5s;
+                animation-delay: 1.8s;
             }
         }
     }

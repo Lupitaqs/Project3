@@ -714,8 +714,8 @@ a {
   background-image: linear-gradient(to right, #99E2D0, #FF79DA, #9356DC);
   -webkit-animation: fade 6.5s linear;
           animation: fade 6.5s linear;
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0.99;
@@ -750,27 +750,27 @@ a {
 }
 
 .Loader .circles .dot-1 {
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
 }
 
 .Loader .circles .dot-2 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
 }
 
 .Loader .circles .dot-3 {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .Loader .circles .dot-4 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 .Loader .circles .dot-5 {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 /*# sourceMappingURL=main.css.map */
