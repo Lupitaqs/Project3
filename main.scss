@@ -336,65 +336,60 @@ a {
 @include footer;
 
 /* Loader  --------------------------------------------*/
-.circles {
+.Loader {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     position: fixed;
-    height: 110vh;
+    height: 105vh;
     width: 100vw;
     z-index: 10;
     margin-top: -28px;
-    background-color: white;
+    background-image: linear-gradient(to right, #99E2D0 , #FF79DA, #9356DC);
     animation: fade 6.5s linear;
-    animation-delay: 6s;
+    animation-delay: 10s;
     animation-fill-mode: forwards;
     opacity: 0.99;
 
-    & > i {
-        font-size: 23px;
-        margin: 5px;
-        animation: loading 4s infinite;
-
-        animation-fill-mode:both;
+    .loading {
+        color: white;
+        opacity: 0.8;
+        position: fixed;
+        padding-bottom: 80px;
     }
 
-    & :nth-child(1) {
-        color: #99E2D0;
-    }
-
-    & :nth-child(2) {
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        background-image: linear-gradient(to right, #99E2D0 , #FF79DA);
-        font-size: 23px;
-        animation-duration: 4.5s;
- 
-    }
-
-    & :nth-child(3) {
-        color: #FF79DA;
-        animation-delay: 1s;
-    }
-
-    & :nth-child(4) {
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        background-image: linear-gradient(to right, #FF79DA , #9356DC);
-        font-size: 23px;
-        animation-delay: 2s;
-        animation-duration: 3s;
-    }
-
-    & :nth-child(5) {
-        color: #9356DC;
-        animation-delay: 3s;
-        animation-duration: 2.4s;
+    .circles {
+        display: flex;
+        flex-flow: row;
+    
+        .dot {
+            font-size: 23px;
+            margin: 5px;
+            animation: loading 4s infinite;
+            color: white;
+            opacity: 0.7;
+            transform: scale(0);
+    
+            &-1 {
+                animation-delay: .5s;
+            }
+    
+            &-2 {
+                animation-delay: 1s;
+            }
+    
+            &-3 {
+                animation-delay: 1.5s;
+            }
+        
+            &-4 {
+                animation-delay: 2s;
+            }
+        
+            &-5 {
+                animation-delay: 2.5s;
+            }
+        }
     }
 }
-
-    
