@@ -319,6 +319,13 @@ a {
             animation: likebtn 500ms;
         }
     }
+
+    &:active {
+        .heart--coloured {
+            transform: scale(1);
+            animation: likebtn 500ms;
+        }
+    }
 }
  
 // Green label 
