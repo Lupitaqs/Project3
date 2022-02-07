@@ -610,7 +610,9 @@ a {
           flex-flow: column;
   font-size: 24px;
   cursor: pointer;
-  height: 25px;
+  height: 33px;
+  background-color: transparent;
+  border: none;
 }
 
 .heart--empty {
