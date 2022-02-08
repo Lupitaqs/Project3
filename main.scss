@@ -293,15 +293,17 @@ a {
     cursor: pointer;
     height: 33px;
     background-color: transparent;
-    width: 20px;
+    width: 40px;
+    border: none;
 
     .far {
         display: inline-block;
     }
     
     .fas {
-        position: absolute;
-        bottom: 9px;
+        position: relative;
+        //bottom: 9px;
+        bottom: 24px;
         font-size: 24.4px;
         -webkit-text-fill-color: transparent;
         color: transparent;
