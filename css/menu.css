@@ -298,7 +298,7 @@ a {
 .menu__heading {
   font-family: "Shrikhand", cursive;
   font-size: 27px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 .menu__heading--modifier {
@@ -306,9 +306,9 @@ a {
 }
 
 .menu .heart {
-  position: relative;
-  left: 84%;
-  bottom: 40px;
+  position: absolute;
+  right: 8%;
+  top: 41px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,7 +319,9 @@ a {
   font-size: 24px;
   cursor: pointer;
   height: 32px;
-  width: 20px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
 }
 
 .menu .heart .far {
@@ -327,8 +329,8 @@ a {
 }
 
 .menu .heart .fas {
-  position: absolute;
-  bottom: 7px;
+  position: relative;
+  bottom: 24.2px;
   font-size: 24.5px;
   -webkit-text-fill-color: transparent;
   color: transparent;

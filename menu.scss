@@ -89,7 +89,7 @@ a {
     &__heading {
         font-family: $font-sh;
         font-size: 27px;
-        margin-bottom: 5px;
+        margin-bottom: 30px;
 
         &--modifier {
             font-size: 26px;
@@ -99,23 +99,25 @@ a {
     // Like heart btn -------------------
     .heart {
         //border: 1px solid red;
-        position: relative;
-        left: 84%;
-        bottom: 40px;
+        position: absolute;
+        right: 8%;
+        top: 41px;
         display: flex;
         flex-flow: column;
         font-size: 24px;
         cursor: pointer;
         height: 32px;
-        width: 20px;
+        width: 40px;
+        background-color: transparent;
+        border: none;
 
         .far {
             display: inline-block;
         }
         
         .fas {
-            position: absolute;
-            bottom: 7px;
+            position: relative;
+            bottom: 24.2px;
             font-size: 24.5px;
             -webkit-text-fill-color: transparent;
             color: transparent;
