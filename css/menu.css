@@ -326,6 +326,7 @@ a {
 
 .menu .heart .far {
   display: inline-block;
+  color: black;
 }
 
 .menu .heart .fas {
