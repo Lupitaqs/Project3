@@ -643,6 +643,13 @@ a {
           animation: likebtn 500ms;
 }
 
+.heart:active .fas {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: likebtn 500ms;
+          animation: likebtn 500ms;
+}
+
 .new {
   color: #278870;
   background-color: #99E2D0;
