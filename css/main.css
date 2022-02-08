@@ -598,9 +598,9 @@ a {
 }
 
 .heart {
-  position: relative;
-  left: 84.8%;
-  bottom: 55px;
+  position: absolute;
+  right: 6%;
+  bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,6 +618,7 @@ a {
 
 .heart .far {
   display: inline-block;
+  color: black;
 }
 
 .heart .fas {
