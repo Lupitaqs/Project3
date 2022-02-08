@@ -298,7 +298,7 @@ a {
 .menu__heading {
   font-family: "Shrikhand", cursive;
   font-size: 27px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .menu__heading--modifier {
@@ -306,9 +306,9 @@ a {
 }
 
 .menu .heart {
-  position: absolute;
-  right: 9%;
-  top: 2.5rem;
+  position: relative;
+  left: 84%;
+  bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,16 +319,16 @@ a {
   font-size: 24px;
   cursor: pointer;
   height: 32px;
+  width: 20px;
 }
 
-.menu .heart--empty {
+.menu .heart .far {
   display: inline-block;
 }
 
-.menu .heart--coloured {
-  position: relative;
-  bottom: 1.8rem;
-  right: .2px;
+.menu .heart .fas {
+  position: absolute;
+  bottom: 7px;
   font-size: 24.5px;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -342,7 +342,7 @@ a {
           transform-origin: 50% 35%;
 }
 
-.menu .heart:hover .heart--coloured {
+.menu .heart:hover .fas {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-animation: likebtn 500ms;

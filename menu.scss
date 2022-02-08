@@ -89,7 +89,7 @@ a {
     &__heading {
         font-family: $font-sh;
         font-size: 27px;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
 
         &--modifier {
             font-size: 26px;
@@ -99,23 +99,23 @@ a {
     // Like heart btn -------------------
     .heart {
         //border: 1px solid red;
-        position: absolute;
-        right: 9%;
-        top: 2.5rem;
+        position: relative;
+        left: 84%;
+        bottom: 40px;
         display: flex;
         flex-flow: column;
         font-size: 24px;
         cursor: pointer;
         height: 32px;
+        width: 20px;
 
-        &--empty {
+        .far {
             display: inline-block;
         }
         
-        &--coloured {
-            position: relative;
-            bottom: 1.8rem;
-            right: .2px;
+        .fas {
+            position: absolute;
+            bottom: 7px;
             font-size: 24.5px;
             -webkit-text-fill-color: transparent;
             color: transparent;
@@ -127,7 +127,7 @@ a {
         }
     
         &:hover {
-            .heart--coloured {
+            .fas {
                 transform: scale(1);
                 animation: likebtn 500ms;
             }

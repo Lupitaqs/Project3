@@ -598,9 +598,9 @@ a {
 }
 
 .heart {
-  position: absolute;
-  right: 8%;
-  bottom: 32px;
+  position: relative;
+  left: 84.8%;
+  bottom: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,30 +612,30 @@ a {
   cursor: pointer;
   height: 33px;
   background-color: transparent;
-  border: none;
+  width: 20px;
 }
 
-.heart--empty {
+.heart .far {
   display: inline-block;
 }
 
-.heart--coloured {
-  position: relative;
-  bottom: 28.8px;
-  font-size: 24.5px;
+.heart .fas {
+  position: absolute;
+  bottom: 9px;
+  font-size: 24.4px;
   -webkit-text-fill-color: transparent;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-transform-origin: 50% 35%;
           transform-origin: 50% 35%;
 }
 
-.heart:hover .heart--coloured {
+.heart:hover .fas {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-animation: likebtn 500ms;
@@ -752,27 +752,27 @@ a {
 }
 
 .Loader .circles .dot-1 {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
+  -webkit-animation-delay: .38s;
+          animation-delay: .38s;
 }
 
 .Loader .circles .dot-2 {
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
+  -webkit-animation-delay: .76s;
+          animation-delay: .76s;
 }
 
 .Loader .circles .dot-3 {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  -webkit-animation-delay: 1.14s;
+          animation-delay: 1.14s;
 }
 
 .Loader .circles .dot-4 {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  -webkit-animation-delay: 1.52s;
+          animation-delay: 1.52s;
 }
 
 .Loader .circles .dot-5 {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  -webkit-animation-delay: 1.90s;
+          animation-delay: 1.90s;
 }
 /*# sourceMappingURL=main.css.map */

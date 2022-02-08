@@ -284,37 +284,36 @@ a {
 
 // Like btn 
 .heart {
-    //border: 1px solid red;
-    position: absolute;
-    right: 8%;
-    bottom: 32px;
+    position: relative;
+    left: 84.8%;
+    bottom: 55px;
     display: flex;
     flex-flow: column;
     font-size: 24px;
     cursor: pointer;
     height: 33px;
     background-color: transparent;
-    border: none;
+    width: 20px;
 
-    &--empty {
+    .far {
         display: inline-block;
     }
     
-    &--coloured {
-        position: relative;
-        bottom: 28.8px;
-        font-size: 24.5px;
+    .fas {
+        position: absolute;
+        bottom: 9px;
+        font-size: 24.4px;
         -webkit-text-fill-color: transparent;
         color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
         background-image: linear-gradient(to top right, $secondary-colour, $primary-colour);
-        transform: scale(1);
+        transform: scale(0);
         transform-origin: 50% 35%;
     }
 
     &:hover {
-        .heart--coloured {
+        .fas {
             transform: scale(1);
             animation: likebtn 500ms;
         }
@@ -374,23 +373,23 @@ a {
             transform: scale(0);
     
             &-1 {
-                animation-delay: .4s;
+                animation-delay: .38s;
             }
     
             &-2 {
-                animation-delay: .8s;
+                animation-delay: .76s;
             }
     
             &-3 {
-                animation-delay: 1.2s;
+                animation-delay: 1.14s;
             }
         
             &-4 {
-                animation-delay: 1.6s;
+                animation-delay: 1.52s;
             }
         
             &-5 {
-                animation-delay: 1.8s;
+                animation-delay: 1.90s;
             }
         }
     }
