@@ -28,6 +28,7 @@ h2 {
     padding: 15px 0;
     margin: 0 0 4px 0;
 
+    // Responsive -------------------------
     @include tablet {
         max-height: 10vh;
         @include header-logo {
@@ -49,6 +50,7 @@ h2 {
             max-width: 20%;
         }
     }
+    //--------------------------------------
 }
     
 /* -- Home Page Book the menu you like ----------------*/
@@ -110,7 +112,8 @@ a {
     padding: 50px 20px 50px 25px;
     display: flex;
     flex-flow: column nowrap;
-    
+
+    // Responsive ---------------------------
     @include tablet {
         align-items: center;
         width: 100vw;
@@ -138,10 +141,12 @@ a {
         }
 
     }
+    // -------------------------------------
     
     &__heading {
         margin-bottom: 27px;
         
+        // Responsive -------------
         @include tablet {
             align-self: start;
         }
@@ -152,6 +157,7 @@ a {
         @include bigscreen {
             padding-left: 3vw;
         }
+        // -------------------------
     }
 }
     
@@ -174,6 +180,7 @@ a {
         }
     }
     
+    // Responsive ---------------
     @include tablet {
         width: 70vw;
     }
@@ -187,7 +194,7 @@ a {
         height: 90px;
         padding-top: 30px;
     }
-
+    // --------------------------
     
 }
 
@@ -200,9 +207,11 @@ a {
     &__heading {
         margin-bottom: 23px;
 
+        // Responsive ------------
         @include bigscreen {
             padding-left: 3vw;
         }        
+        // -----------------------
     }
 
     &__cards {
@@ -210,6 +219,7 @@ a {
         flex-flow: column nowrap;
         padding: 0;
         
+        // Responsive ------------------------
         @include tablet {
             flex-flow: row wrap;
             justify-content: space-around;
@@ -226,7 +236,7 @@ a {
                 margin-bottom: 7vh;
             }
         } 
-
+        // ------------------------------------
     }
 }
 
@@ -240,13 +250,13 @@ a {
     @include boxshadow;
     transform: scale(1);
 
+    // Responsive ---------------------
     @include desktop {
         &:hover {
             transform: scale(1.02);
             box-shadow: 2px 8px 18px 0px $box-shadow--dark;
         }  
     }
-    
     
     @include tablet {
         width: 45%;
@@ -255,6 +265,7 @@ a {
     @include bigscreen {
         width: 40%;
     }
+    // --------------------------------
 
     a {
         text-decoration: none;
